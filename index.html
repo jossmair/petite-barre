@@ -1,0 +1,1708 @@
+<!doctype html>
+<html lang="fr">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gîte à Pouzauges (Vendée) — La Petite Barre | Proche Puy du Fou</title>
+  <meta name="description" content="Gîte chaleureux à La Petite Barre, Pouzauges (Vendée). Idéalement situé près du Puy du Fou et des plus belles escapades vendéennes. Réservation par téléphone." />
+  <meta name="theme-color" content="#2f3b2f" />
+  <meta property="og:title" content="Gîte à Pouzauges — La Petite Barre | Proche Puy du Fou" />
+  <meta property="og:description" content="Un séjour campagne chic au cœur du bocage vendéen, à deux pas du Puy du Fou. Réservation par téléphone." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #fbfaf7;
+      --card: rgba(255,255,255,.85);
+      --text: #1b1f1b;
+      --muted: #5b635b;
+      --line: rgba(27,31,27,.12);
+      --shadow: 0 16px 50px rgba(0,0,0,.10);
+      --shadow2: 0 10px 24px rgba(0,0,0,.10);
+      --radius: 22px;
+      --radius2: 18px;
+      --accent: #2f6b3f;     /* vert bocage */
+      --accent2: #b06a2f;    /* terre cuite */
+      --accent3: #1f3b4a;    /* bleu ardoise */
+      --focus: 0 0 0 4px rgba(47,107,63,.25);
+      --max: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 500px at 20% -10%, rgba(176,106,47,.10), transparent 60%),
+        radial-gradient(900px 550px at 100% 0%, rgba(47,107,63,.12), transparent 55%),
+        radial-gradient(900px 700px at 50% 120%, rgba(31,59,74,.10), transparent 55%),
+        var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.55;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:focus-visible, button:focus-visible{ outline:none; box-shadow: var(--focus); border-radius:12px; }
+    ::selection{ background: rgba(47,107,63,.20); }
+
+    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Header */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(251,250,247,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 220px;
+    }
+    .logo{
+      width:40px;height:40px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(47,107,63,.95), rgba(176,106,47,.90));
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-30%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.45), transparent 55%);
+      transform: rotate(14deg);
+    }
+    .brand .name{ font-weight:720; letter-spacing:.2px; line-height:1.1; }
+    .brand .tag{ font-size:12px; color:var(--muted); margin-top:2px; }
+
+    .nav{
+      display:flex; align-items:center; gap:14px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .nav a{
+      font-size:14px;
+      color: rgba(27,31,27,.78);
+      padding:8px 10px;
+      border-radius: 12px;
+      transition: background .2s ease, color .2s ease;
+    }
+    .nav a:hover{ background: rgba(47,107,63,.08); color: rgba(27,31,27,.95); }
+
+    .cta-row{ display:flex; align-items:center; gap:10px; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(27,31,27,.14);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 8px 18px rgba(0,0,0,.08);
+      font-weight:650;
+      font-size:14px;
+      cursor:pointer;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,0,0,.10); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(47,107,63,.98), rgba(31,59,74,.92));
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 14px 34px rgba(31,59,74,.22);
+    }
+    .btn.primary:hover{ box-shadow: 0 18px 40px rgba(31,59,74,.26); }
+    .btn .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.18);
+    }
+    .btn.secondary{
+      background: rgba(255,255,255,.70);
+    }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      padding: 46px 0 26px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .hero-card{
+      position:relative;
+      border-radius: calc(var(--radius) + 6px);
+      overflow:hidden;
+      min-height: 520px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.55);
+      background: #1b1f1b;
+    }
+    .hero-bg{
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1730131800274-7dcfce3c77cd?auto=format&fit=crop&fm=jpg&q=60&w=2200");
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.03);
+    }
+    .hero-overlay{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 500px at 20% 20%, rgba(47,107,63,.35), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(176,106,47,.25), transparent 55%);
+      mix-blend-mode: screen;
+      opacity:.9;
+      pointer-events:none;
+    }
+    .hero-content{
+      position:relative;
+      height:100%;
+      padding: 28px 26px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.20);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      width: fit-content;
+      font-size: 13px;
+      color: rgba(255,255,255,.92);
+    }
+    .badge .pin{
+      width: 9px; height: 9px; border-radius: 99px;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.16);
+    }
+    h1{
+      margin: 10px 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height:1.05;
+      letter-spacing: -0.6px;
+    }
+    .hero p{
+      margin:0;
+      max-width: 56ch;
+      color: rgba(255,255,255,.88);
+      font-size: 16px;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 18px;
+    }
+    .hero-actions .btn{
+      border-color: rgba(255,255,255,.24);
+      background: rgba(255,255,255,.12);
+      color:#fff;
+      box-shadow:none;
+    }
+    .hero-actions .btn:hover{ background: rgba(255,255,255,.16); transform: translateY(-1px); }
+    .hero-actions .btn.primary{
+      background: linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,255,255,.82));
+      color: #142014;
+      border-color: rgba(255,255,255,.55);
+    }
+    .hero-actions .btn.primary .dot{ background: rgba(47,107,63,.95); box-shadow: 0 0 0 4px rgba(47,107,63,.20); }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:10px;
+      margin-top: 12px;
+    }
+    .stat{
+      border-radius: 18px;
+      padding: 12px 12px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .stat .k{ font-weight:780; font-size: 16px; }
+    .stat .l{ font-size: 12px; color: rgba(255,255,255,.82); margin-top:2px; }
+
+    /* Side card */
+    .side{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .panel{
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    .panel .pad{ padding: 18px; }
+    .panel h2{
+      margin:0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.2px;
+    }
+    .panel p{ margin:0; color: var(--muted); font-size: 14px; }
+    .list{
+      margin-top: 12px;
+      display:grid;
+      gap:10px;
+    }
+    .item{
+      display:flex; gap:12px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 16px;
+      background: rgba(47,107,63,.06);
+      border: 1px solid rgba(47,107,63,.10);
+    }
+    .ic{
+      width:34px; height:34px;
+      border-radius: 14px;
+      background: rgba(47,107,63,.12);
+      display:flex; align-items:center; justify-content:center;
+      flex: 0 0 auto;
+    }
+    .ic svg{ width:18px; height:18px; opacity:.92; }
+    .item .t{ font-weight:700; font-size: 14px; }
+    .item .d{ margin-top:2px; color: var(--muted); font-size: 13px; }
+
+    .mini-gallery{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      padding: 0 18px 18px;
+    }
+    .mini-gallery img{
+      width:100%;
+      height: 170px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid rgba(27,31,27,.10);
+    }
+
+    /* Sections */
+    section{ padding: 34px 0; }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom: 16px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: clamp(22px, 2.2vw, 28px);
+      letter-spacing: -.35px;
+    }
+    .section-head p{
+      margin:0;
+      color: var(--muted);
+      max-width: 62ch;
+      font-size: 14px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .card{
+      grid-column: span 4;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    .card .pad{ padding: 18px; }
+    .card h3{ margin:0 0 8px; font-size: 16px; }
+    .card p{ margin:0; color: var(--muted); font-size: 14px; }
+    .chip-row{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top: 12px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(27,31,27,.12);
+      background: rgba(255,255,255,.70);
+      font-size: 13px;
+      color: rgba(27,31,27,.85);
+    }
+    .chip b{ font-weight:760; }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .g-big, .g-col{ border-radius: var(--radius); overflow:hidden; border: 1px solid rgba(27,31,27,.10); box-shadow: var(--shadow2); }
+    .g-big img{ width:100%; height: 420px; object-fit:cover; display:block; }
+    .g-col{ display:grid; gap:14px; background: transparent; border:none; box-shadow:none; }
+    .g-col img{
+      width:100%;
+      height: 203px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid rgba(27,31,27,.10);
+      box-shadow: var(--shadow2);
+      display:block;
+    }
+
+    /* Map + contact */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .map-wrap{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(27,31,27,.10);
+      box-shadow: var(--shadow2);
+      background: #fff;
+      min-height: 420px;
+    }
+    .map-wrap iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+    .contact-card{
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: var(--shadow2);
+      padding: 18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .contact-card h3{ margin:0; font-size: 18px; }
+    .contact-grid{
+      display:grid;
+      gap:10px;
+      margin-top: 6px;
+    }
+    .info{
+      display:flex; gap:12px;
+      align-items:flex-start;
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(27,31,27,.10);
+      background: rgba(255,255,255,.70);
+    }
+    .info .k{ font-weight:760; }
+    .info .v{ color: var(--muted); font-size: 14px; margin-top:2px; }
+    .info a{ text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    /* Footer */
+    footer{
+      padding: 22px 0 34px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.45);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .foot{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      color: rgba(27,31,27,.70);
+      font-size: 13px;
+    }
+    .foot .links{ display:flex; gap:10px; flex-wrap:wrap; }
+    .foot a{ padding:6px 8px; border-radius: 12px; }
+    .foot a:hover{ background: rgba(47,107,63,.08); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-card{ min-height: 520px; }
+      .mini-gallery img{ height: 160px; }
+      .cards .card{ grid-column: span 6; }
+      .gallery{ grid-template-columns: 1fr; }
+      .g-big img{ height: 360px; }
+      .g-col{ grid-template-columns: 1fr 1fr; }
+      .g-col img{ height: 220px; }
+      .split{ grid-template-columns: 1fr; }
+      .map-wrap{ min-height: 380px; }
+      .brand{ min-width: auto; }
+      .nav{ display:none; }
+    }
+    @media (max-width: 620px){
+      .container{ width: calc(100% - 28px); }
+      .hero-content{ padding: 22px 18px; }
+      .hero-stats{ grid-template-columns: 1fr; }
+      .cards .card{ grid-column: span 12; }
+      .g-col{ grid-template-columns: 1fr; }
+      .g-col img{ height: 210px; }
+      .btn{ padding: 12px 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
+      .btn{ transition:none; }
+      .btn:hover{ transform:none; }
+    }
+  
+    /* === Famille : Galerie + Prestations (remplace les 3 cartes "Le gîte") === */
+    .family-wrap{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .family-panel{
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    .family-panel .pad{ padding: 18px; }
+    .family-panel h3{ margin:0 0 8px; font-size: 16px; }
+    .family-panel p{ margin:0; color: var(--muted); font-size: 14px; }
+
+    .gallery-family{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+    }
+    .gallery-main{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(27,31,27,.10);
+      box-shadow: var(--shadow2);
+      background:#fff;
+    }
+    .gallery-main img{
+      width:100%;
+      height: 430px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .gallery-grid img{
+      width:100%;
+      height: 208px;
+      object-fit:cover;
+      border-radius: var(--radius);
+      border: 1px solid rgba(27,31,27,.10);
+      box-shadow: var(--shadow2);
+      display:block;
+      background:#fff;
+    }
+
+    .family-features{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .feature-list{
+      margin: 6px 0 0;
+      padding-left: 18px;
+      color: rgba(27,31,27,.88);
+      font-size: 14px;
+    }
+    .feature-list li{ margin-bottom: 10px; line-height: 1.5; }
+    .feature-note{
+      margin-top:auto;
+      padding-top:12px;
+      border-top: 1px solid rgba(27,31,27,.10);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* CTA secondaire dans la section famille */
+    .family-cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 10px;
+    }
+    .family-cta .btn{
+      box-shadow:none;
+      background: rgba(255,255,255,.70);
+    }
+    .family-cta .btn.primary{
+      background: linear-gradient(135deg, rgba(47,107,63,.98), rgba(31,59,74,.92));
+      color:#fff;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 14px 34px rgba(31,59,74,.18);
+    }
+
+    @media (max-width: 980px){
+      .family-wrap{ grid-template-columns: 1fr; }
+      .gallery-family{ grid-template-columns: 1fr; }
+      .gallery-main img{ height: 360px; }
+      .gallery-grid{ grid-template-columns: 1fr 1fr; }
+      .gallery-grid img{ height: 220px; }
+    }
+    @media (max-width: 620px){
+      .gallery-grid{ grid-template-columns: 1fr; }
+      .gallery-grid img{ height: 210px; }
+    }
+
+  
+    /* === Proximité : section plus visuelle (remplace les cartes) === */
+    .proxi-wrap{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .proxi-feature{
+      border-radius: calc(var(--radius) + 6px);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.55);
+      box-shadow: var(--shadow);
+      position:relative;
+      min-height: 420px;
+      background:#1b1f1b;
+    }
+    .proxi-feature .bg{
+      position:absolute; inset:0;
+      background-size: cover;
+      background-position:center;
+      filter: saturate(1.02);
+      transform: scale(1.03);
+    }
+    .proxi-feature .shade{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.48)),
+        radial-gradient(900px 520px at 15% 25%, rgba(47,107,63,.28), transparent 58%),
+        radial-gradient(900px 520px at 90% 20%, rgba(176,106,47,.22), transparent 60%),
+        radial-gradient(1000px 700px at 50% 120%, rgba(31,59,74,.18), transparent 60%);
+      pointer-events:none;
+    }
+    .proxi-feature .content{
+      position:relative;
+      height:100%;
+      padding: 22px 22px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .proxi-feature h3{
+      margin:0 0 8px;
+      font-size: 22px;
+      letter-spacing: -.25px;
+      line-height:1.1;
+    }
+    .proxi-feature p{
+      margin:0;
+      color: rgba(255,255,255,.88);
+      max-width: 60ch;
+      font-size: 14px;
+    }
+    .proxi-bullets{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,.90);
+      font-size: 14px;
+    }
+    .proxi-bullets li{ margin-bottom:8px; }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top: 12px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.20);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-size: 13px;
+      color: rgba(255,255,255,.92);
+    }
+    .proxi-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 12px;
+    }
+    .proxi-actions .btn{
+      border-color: rgba(255,255,255,.24);
+      background: rgba(255,255,255,.12);
+      color:#fff;
+      box-shadow:none;
+    }
+    .proxi-actions .btn:hover{ background: rgba(255,255,255,.16); }
+
+    .proxi-side{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    .proxi-tile{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(27,31,27,.10);
+      box-shadow: var(--shadow2);
+      background:#fff;
+      min-height: 203px;
+      position:relative;
+    }
+    .proxi-tile .bg{
+      position:absolute; inset:0;
+      background-size: cover;
+      background-position:center;
+      transform: scale(1.03);
+    }
+    .proxi-tile .shade{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.52)),
+        radial-gradient(700px 420px at 20% 25%, rgba(47,107,63,.24), transparent 60%),
+        radial-gradient(700px 420px at 90% 20%, rgba(176,106,47,.18), transparent 62%);
+    }
+    .proxi-tile .content{
+      position:relative;
+      padding: 16px 16px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      height:100%;
+      gap:10px;
+    }
+    .proxi-tile h4{
+      margin:0;
+      font-size: 16px;
+      letter-spacing:-.2px;
+    }
+    .proxi-tile p{
+      margin:0;
+      color: rgba(255,255,255,.88);
+      font-size: 13px;
+    }
+
+    .proxi-list{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .proxi-mini{
+      grid-column: span 4;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    .proxi-mini .pad{ padding: 16px 16px; }
+    .proxi-mini .k{ font-weight:760; font-size:14px; }
+    .proxi-mini .v{ margin-top:4px; color:var(--muted); font-size:13px; }
+    .proxi-mini .chips{ margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .proxi-mini .chips .chip{ background: rgba(255,255,255,.70); }
+
+    @media (max-width: 980px){
+      .proxi-wrap{ grid-template-columns: 1fr; }
+      .proxi-feature{ min-height: 420px; }
+      .proxi-list .proxi-mini{ grid-column: span 6; }
+    }
+    @media (max-width: 620px){
+      .proxi-list .proxi-mini{ grid-column: span 12; }
+    }
+
+  
+    /* === FIX PROXIMITÉ : pleine largeur + image Puy du Fou === */
+    .proxi-feature{
+      min-height: 520px;
+    }
+    .proxi-feature .content{
+      padding: 26px 26px;
+    }
+    .proxi-feature .bg{
+      background-image:url('https://www.vendeebocage.fr/app/uploads/2023/02/saison2023-logo-hd-1-1024x776.webp');
+    }
+    @media (max-width: 980px){
+      .proxi-feature{ min-height: 480px; }
+    }
+
+  
+    /* === Proximité : 3 cartes visuelles (remplace les 3 mini-cartes) === */
+    .proxi-cards3{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+.proxi-card3{
+  grid-column: span 4;
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: none;
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+  position:relative;
+  min-height: 220px;
+  background:#1b1f1b;
+}
+
+    .proxi-card3 .bg{
+      position:absolute; inset:0;
+      background-size: cover;
+      background-position:center;
+      transform: scale(1.03);
+      filter: saturate(1.02);
+    }
+    .proxi-card3 .shade{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.55)),
+        radial-gradient(700px 420px at 20% 30%, rgba(47,107,63,.20), transparent 60%),
+        radial-gradient(700px 420px at 90% 15%, rgba(176,106,47,.16), transparent 62%);
+    }
+    .proxi-card3 .content{
+      position:relative;
+      height:100%;
+      padding: 16px 16px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .proxi-card3 .title{
+      font-weight:780;
+      font-size: 16px;
+      letter-spacing:-.2px;
+      margin:0;
+    }
+    .proxi-card3 .desc{
+      margin:0;
+      color: rgba(255,255,255,.88);
+      font-size: 13px;
+      line-height:1.45;
+      max-width: 55ch;
+    }
+    .proxi-card3 .pills{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top: 10px;
+    }
+    .proxi-card3 .pills .pill{
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.20);
+      color: rgba(255,255,255,.92);
+      font-size: 13px;
+      padding: 8px 10px;
+    }
+
+    @media (max-width: 980px){
+      .proxi-card3{ grid-column: span 6; }
+    }
+    @media (max-width: 620px){
+      .proxi-card3{ grid-column: span 12; }
+    }
+
+  
+    /* === Pastel overlays proximity (harmonie avec la palette) === */
+    .proxi-feature .shade{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(0,0,0,.50)),
+        radial-gradient(900px 520px at 15% 25%, rgba(47,107,63,.26), transparent 58%),
+        radial-gradient(900px 520px at 90% 20%, rgba(176,106,47,.20), transparent 60%),
+        radial-gradient(1000px 700px at 50% 120%, rgba(31,59,74,.16), transparent 60%);
+    }
+    .proxi-tile .shade{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.54)),
+        radial-gradient(700px 420px at 20% 25%, rgba(47,107,63,.22), transparent 60%),
+        radial-gradient(700px 420px at 90% 20%, rgba(176,106,47,.16), transparent 62%);
+    }
+    .proxi-card3 .shade{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(0,0,0,.56)),
+        radial-gradient(700px 420px at 20% 30%, rgba(47,107,63,.18), transparent 60%),
+        radial-gradient(700px 420px at 90% 15%, rgba(176,106,47,.14), transparent 62%);
+    }
+
+  </style>
+
+<style>
+.carousel-simple{
+  position:relative;
+  margin-top:20px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.cs-track{
+  display:flex;
+  transition:transform .4s ease;
+}
+.cs-track img{
+  width:100%;
+  flex:0 0 100%;
+  object-fit:cover;
+}
+.cs-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  border:none;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  font-size:26px;
+  cursor:pointer;
+}
+.cs-btn.prev{left:12px;}
+.cs-btn.next{right:12px;}
+</style>
+
+
+<style>
+.carousel-thumb{margin-top:20px}
+.ct-thumbs{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+}
+.ct-thumbs img{
+  width:120px;
+  height:80px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer;
+  opacity:.6;
+  border:2px solid transparent;
+}
+.ct-thumbs img.active{
+  opacity:1;
+  border-color:#2f6b3f;
+}
+.ct-main{position:relative;
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+}
+.ct-track{
+  display:flex;
+  transition:transform .4s ease;
+}
+.ct-track img{
+  width:100%;
+  flex:0 0 100%;
+  object-fit:cover;
+}
+.ct-main .ct-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  border:none;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  font-size:26px;
+  cursor:pointer;
+}
+.ct-main .ct-btn.prev{left:12px}
+.ct-main .ct-btn.next{right:12px}
+</style>
+
+
+<style>
+/* --- Carousel (responsive fix) --- */
+.carousel-thumb{margin-top:20px; width:100%; max-width:100%;}
+.ct-thumbs{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+  overflow-x:auto;
+  padding-bottom:4px;
+  scrollbar-width:thin;
+}
+.ct-thumbs img{
+  flex:0 0 auto;
+  width:120px;
+  height:80px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer;
+  opacity:.6;
+  border:2px solid transparent;
+}
+.ct-thumbs img.active{
+  opacity:1;
+  border-color:rgba(47,107,63,.95);
+}
+.ct-main{position:relative;
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border-radius:24px;
+  aspect-ratio: 16 / 9;
+  background: rgba(0,0,0,.04);
+}
+.ct-track{
+  display:flex;
+  height:100%;
+  transition:transform .4s ease;
+}
+.ct-track img{
+  width:100%;
+  height:100%;
+  flex:0 0 100%;
+  object-fit:cover;
+  display:block;
+}
+.ct-main .ct-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  border:none;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  font-size:0;
+  cursor:pointer;
+  z-index:5;
+  display:grid;
+  place-items:center;
+  -webkit-tap-highlight-color: transparent;
+}
+.ct-btn svg{width:18px;height:18px;fill:rgba(255,255,255,.95);}
+.ct-main .ct-btn.prev{left:12px}
+.ct-main .ct-btn.next{right:12px}
+.ct-btn:active{transform:translateY(-50%) scale(.98)}
+@media (max-width: 720px){
+  .ct-main{position:relative;border-radius:20px; aspect-ratio: 4 / 3;}
+  .ct-main .ct-btn{width:42px;height:42px}
+  .ct-thumbs img{width:92px;height:62px;border-radius:12px}
+}
+@media (max-width: 420px){
+  .ct-main .ct-btn{width:40px;height:40px;}
+  .ct-main .ct-btn.prev{left:10px; right:auto;}
+  .ct-main .ct-btn.next{right:10px; left:auto;}
+  .ct-thumbs img{width:84px;height:56px}
+}
+
+</style>
+
+
+<style>
+/* Safety net: hide any misplaced carousel buttons */
+.ct-btn { display:none !important; }
+.ct-main .ct-btn { display:grid !important; }
+</style>
+
+
+<style>
+/* ===== Carousel (miniatures au-dessus) ===== */
+.carousel-thumb{margin-top:14px; width:100%; max-width:100%;}
+.ct-thumbs{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+  overflow-x:auto;
+  padding-bottom:4px;
+  scrollbar-width:thin;
+}
+.ct-thumbs img{
+  flex:0 0 auto;
+  width:96px;
+  height:64px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  opacity:.62;
+  border:2px solid transparent;
+}
+.ct-thumbs img.active{opacity:1;border-color:rgba(47,107,63,.95);}
+
+.ct-main{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border-radius:24px;
+  aspect-ratio: 16 / 9;
+  background: rgba(0,0,0,.04);
+}
+.ct-track{
+  display:flex;
+  height:100%;
+  transition:transform .35s ease;
+  touch-action: pan-y; /* autorise le swipe horizontal */
+}
+.ct-track img{
+  width:100%;
+  height:100%;
+  flex:0 0 100%;
+  object-fit:cover;
+  display:block;
+}
+
+.ct-main .ct-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.45);
+  border:none;
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  cursor:pointer;
+  z-index:5;
+  display:grid;
+  place-items:center;
+  -webkit-tap-highlight-color: transparent;
+}
+.ct-main .ct-btn svg{width:18px;height:18px;fill:rgba(255,255,255,.95);}
+.ct-main .ct-btn.prev{left:12px; right:auto;}
+.ct-main .ct-btn.next{right:12px; left:auto;}
+.ct-main .ct-btn:active{transform:translateY(-50%) scale(.98);}
+
+@media (max-width: 720px){
+  .ct-main{border-radius:20px; aspect-ratio: 4 / 3;}
+  .ct-main .ct-btn{width:42px;height:42px}
+  .ct-thumbs img{width:84px;height:56px;border-radius:12px}
+}
+</style>
+
+</head>
+
+<body>
+  <!-- ====== Personnalisation rapide ======
+       Nom du gîte     : Gîte de La Petite Barre
+       Téléphone       : 06 00 00 00 00
+       Adresse (texte) : La Petite Barre, 85700 Pouzauges, Vendée
+       Accroche temps  : "à ~20 min du Puy du Fou" (ajustez selon votre réalité)
+  ======================================== -->
+
+  <header class="topbar" role="banner">
+    <div class="container">
+      <div class="inner">
+        <a class="brand" href="#top" aria-label="Retour en haut de page">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <div class="name">Gîte de La Petite Barre</div>
+            <div class="tag">Pouzauges · Vendée · Bocage</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="#gite">Le gîte</a>
+          <a href="#proximite">À proximité</a>
+          
+          <a href="#acces">Accès</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cta-row">
+          <a class="btn primary" href="tel:+33623012286" aria-label="Appeler pour réserver">
+            <span class="dot" aria-hidden="true"></span>
+            Appeler pour réserver
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <article class="hero-card" aria-label="Présentation du gîte">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <div class="hero-content">
+              <div>
+              
+
+                <h1>Le calme du bocage, <br/>à deux pas des grands souvenirs.</h1>
+                <p>
+                  Bienvenue à <b>La Petite Barre</b>, à Pouzauges, au cœur de la Vendée.
+                  Un gîte chaleureux et moderne pour se ressourcer… et profiter du <b>Puy du Fou</b> et des plus belles escapades vendéennes.
+                </p>
+
+                <div class="hero-actions" role="group" aria-label="Actions principales">
+                  <a class="btn primary" href="tel:+33600000000" aria-label="Appeler maintenant">
+                    <span class="dot" aria-hidden="true"></span>
+                    06 23 01 22 86
+                  </a>
+                  <a class="btn" href="#acces" aria-label="Voir l'accès et la carte">
+                    Voir l’itinéraire
+                  </a>
+                  <a class="btn" href="#proximite" aria-label="Voir les attractions à proximité">
+                    Idées de sorties
+                  </a>
+                </div>
+
+                <div class="hero-stats" aria-label="Points forts">
+                  <div class="stat">
+                    <div class="k">~20 min</div>
+                    <div class="l">du Puy du Fou</div>
+                  </div>
+                  <div class="stat">
+                    <div class="k">100% téléphone</div>
+                    <div class="l">réservation simple & directe</div>
+                  </div>
+                  <div class="stat">
+                    <div class="k">Bocage</div>
+                    <div class="l">nature · balades · douceur</div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </article>
+
+          <aside class="side" aria-label="Informations rapides">
+            <div class="panel">
+              <div class="pad">
+                <h2>Un séjour qui respire</h2>
+                <p>
+                  Un esprit <b>campagnard</b>, une touche <b>moderne</b>, et l’essentiel pour se sentir bien :
+                  douceur, simplicité, et proximité des sites incontournables.
+                </p>
+
+                <div class="list" aria-label="Avantages">
+                  <div class="item">
+                    <div class="ic" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 21s-6-4.35-6-10a6 6 0 0 1 12 0c0 5.65-6 10-6 10z"/>
+                        <circle cx="12" cy="11" r="2"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="t">Pouzauges, Vendée</div>
+                      <div class="d">Base idéale pour rayonner : Puy du Fou, bocage, marais, côte.</div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="ic" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92V21a1 1 0 0 1-1.09 1A19.88 19.88 0 0 1 3 5.09 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.27.95l-2.2 2.2a16 16 0 0 0 6.29 6.29l2.2-2.2a1 1 0 0 1 .95-.27l4 1a1 1 0 0 1 .75 1z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="t">Réservation par téléphone</div>
+                      <div class="d">Simple : un appel, des réponses claires, et on valide ensemble votre séjour.</div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="ic" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18"/>
+                        <path d="M3 6h18"/>
+                        <path d="M3 18h18"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="t">Ambiance chaleureuse</div>
+                      <div class="d">Lumineux, confortable, pensé pour se retrouver et ralentir.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+
+            <div class="panel">
+              <div class="pad">
+                <h2>En bref</h2>
+                <div class="chip-row" aria-label="Caractéristiques (à personnaliser)">
+                  <span class="chip"><b>✔</b> Campagne</span>
+                  <span class="chip"><b>✔</b> Proche Puy du Fou</span>
+                  <span class="chip"><b>✔</b> Calme</span>
+                  <span class="chip"><b>✔</b> Accès facile</span>
+				  <span class="chip"><b>✔</b> En famille</span>
+                  <span class="chip"><b>✔</b> Séjour détente</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <!-- LE GÎTE (version famille + galerie + prestations) -->
+    <section id="gite">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Un gîte pensé pour les familles</h2>
+            <p>
+              Vous venez avec des enfants (ou un bébé) ? Ici, tout est fait pour que ce soit <b>simple</b> :
+              on arrive, on pose les valises, et on profite.
+            </p>
+          </div>
+        </div>
+
+        <div class="family-wrap">
+          <!-- Galerie -->
+          <div class="family-panel" aria-label="Galerie du gîte">
+            <div class="pad" style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+              <div>
+                <h3 style="margin:0 0 6px; font-size:18px;">Galerie du gîte</h3>
+                <p style="margin:0;">Pièce de vie, cuisine équipée, chambres et extérieur — l’essentiel en un coup d’œil.</p>
+              </div>
+              
+            </div>
+
+            <div class="pad" style="padding-top:0;">
+             
+<div class="carousel-thumb" aria-label="Galerie photos du gîte">
+  <div class="ct-thumbs" aria-label="Miniatures">
+    <img src="images/01.webp" data-i="0" alt="">
+    <img src="images/02.webp" data-i="1" alt="">
+    <img src="images/03.webp" data-i="2" alt="">
+    <img src="images/04.webp" data-i="3" alt="">
+    <img src="images/05.webp" data-i="4" alt="">
+    <img src="images/06.webp" data-i="5" alt="">
+    <img src="images/07.webp" data-i="6" alt="">
+    <img src="images/08.webp" data-i="7" alt="">
+    <img src="images/09.webp" data-i="8" alt="">
+    <img src="images/10.webp" data-i="9" alt="">
+    <img src="images/11.webp" data-i="10" alt="">
+    <img src="images/12.webp" data-i="11" alt="">
+    <img src="images/13.webp" data-i="12" alt="">
+    <img src="images/14.webp" data-i="13" alt="">
+  </div>
+
+  <div class="ct-main">
+    <button class="ct-btn prev" type="button" aria-label="Photo précédente">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15.5 19.5a1 1 0 0 1-.7-.3l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 1 1 1.4 1.4L10.9 11l6 6a1 1 0 0 1-.7 1.7Z"/>
+      </svg>
+    </button>
+    <button class="ct-btn next" type="button" aria-label="Photo suivante">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 19.5a1 1 0 0 1-.7-1.7l6-6-6-6a1 1 0 1 1 1.4-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-.7.3Z"/>
+      </svg>
+    </button>
+
+    <div class="ct-track">
+      <img src="images/01.webp" alt="">
+      <img src="images/02.webp" alt="">
+      <img src="images/03.webp" alt="">
+      <img src="images/04.webp" alt="">
+      <img src="images/05.webp" alt="">
+      <img src="images/06.webp" alt="">
+      <img src="images/07.webp" alt="">
+      <img src="images/08.webp" alt="">
+      <img src="images/09.webp" alt="">
+      <img src="images/10.webp" alt="">
+      <img src="images/11.webp" alt="">
+      <img src="images/12.webp" alt="">
+      <img src="images/13.webp" alt="">
+      <img src="images/14.webp" alt="">
+    </div>
+  </div>
+</div>
+
+                
+              
+          </div>
+          </div>
+
+          <!-- Prestations famille -->
+          <div class="family-panel" aria-label="Prestations sur place">
+            <div class="pad family-features">
+              <div>
+                <h3 style="margin:0 0 6px; font-size:18px;">Tout est prévu sur place</h3>
+                <p style="margin:0;">
+                  L’objectif : vous éviter les “on a oublié…” et rendre le séjour confortable pour toute la tribu.
+                </p>
+
+                <ul class="feature-list">
+                  <li><b>Cuisine & repas</b> : vaisselle complète, casseroles, plats, verres, couverts, et tout le nécessaire pour cuisiner au quotidien.</li>
+                  <li><b>Pour les enfants</b> : espace pour jouer, jeux et livres, ambiance calme et rassurante.</li>
+                  <li><b>Pour les bébés</b> : lit bébé, chaise haute et de quoi s’installer facilement.</li>
+                  <li><b>Confort</b> : literie soignée, rangements, chauffage, maison facile à vivre — on se sent vite “comme chez soi”.</li>
+                  <li><b>Extérieur</b> : de l’air, de la verdure, et un cadre paisible pour se détendre (et laisser les enfants souffler).</li>
+                </ul>
+
+                <div class="chip-row" aria-label="Points forts famille">
+                  <span class="chip"><b>✔</b> Arrivée simple</span>
+                  <span class="chip"><b>✔</b> Cuisine équipée</span>
+                  <span class="chip"><b>✔</b> Enfants & bébés</span>
+                  <span class="chip"><b>✔</b> Calme</span>
+                </div>
+
+                
+              </div>
+
+              <div class="feature-note">
+                <b>Astuce famille :</b> pour le Puy du Fou, prévoir de bonnes chaussures et (si possible) deux jours en haute saison.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROXIMITÉ / ATTRACTIONS (version plus visuelle) -->
+    <section id="proximite">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Autour du gîte : des sorties faciles à faire en famille</h2>
+        <p>
+          Vous êtes bien placé pour <b>le Puy du Fou</b>… et pour varier entre bocage, nature et une journée “océan”.
+        </p>
+      </div>
+    </div>
+
+    <div class="proxi-wrap">
+      <article class="proxi-feature" aria-label="Focus : Puy du Fou">
+        <div class="bg" style="background-image:url('https://www.vendeebocage.fr/app/uploads/2023/02/saison2023-logo-hd-1-1024x776.webp');"></div>
+        <div class="shade" aria-hidden="true"></div>
+
+        <div class="content">
+          <div>
+            
+            <h3>Le Puy du Fou</h3>
+            <p>
+              Une journée (ou deux) qui met tout le monde d’accord : spectacles grandioses,
+              décors immersifs, et souvenirs garantis.
+            </p>
+
+            <ul class="proxi-bullets">
+              <li><b>Famille-friendly</b> : émotions + pauses possibles.</li>
+              <li><b>Astuce</b> : venir tôt / réserver en avance en haute saison.</li>
+              <li><b>Option</b> : 2 jours si vous voulez “tout voir” sans courir.</li>
+            </ul>
+
+            
+          </div>
+
+          <div class="proxi-actions" aria-label="Actions Puy du Fou">
+            <a class="btn primary" href="tel:+33600000000" aria-label="Appeler pour réserver">
+              <span class="dot" aria-hidden="true"></span>
+              Appeler pour réserver
+            </a>
+            <a class="btn" href="#acces" aria-label="Voir l'accès et la carte">Voir l’itinéraire</a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="proxi-side" aria-label="Autres idées de sorties">
+        <div class="proxi-tile" aria-label="Pouzauges et bocage">
+          <div class="bg" style="background-image:url('https://www.vendee-maraispoitevin.com/app/uploads/fontenay-vendee-tourisme/2023/05/thumbs/Bocage-Vendeen-vue-aerienne-1920x960-crop-1684852264.jpg');"></div>
+          <div class="shade" aria-hidden="true"></div>
+          <div class="content">
+            <div>
+              <h4>Pouzauges & bocage</h4>
+              <p>Balades, points de vue, patrimoine : parfait pour une fin de journée tranquille.</p>
+            </div>
+           
+          </div>
+        </div>
+
+        <div class="proxi-tile" aria-label="Journée nature : Marais Poitevin">
+          <div class="bg" style="background-image:url('https://i0.wp.com/blog.mappy.com/wp-content/uploads/2023/04/2ada7-marais-poitevin.png?fit=1100%2C500&ssl=1');"></div>
+          <div class="shade" aria-hidden="true"></div>
+          <div class="content">
+            <div>
+              <h4>Marais Poitevin</h4>
+              <p>Canaux, barques, “Venise Verte” : une sortie nature dépaysante, très appréciée des familles.</p>
+            </div>
+            
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="proxi-cards3" role="list" aria-label="Autres escapades">
+      <article class="proxi-card3" role="listitem" aria-label="Les Sables-d’Olonne">
+        <div class="bg" style="background-image:url('https://www.moulindelasalle.com/wp-content/uploads/2025/01/2023_Paysage_CoteSauvage_PlagedesGraviers_LesSablesdOlonne_EnVendee_395-1.jpg');"></div>
+        <div class="shade" aria-hidden="true"></div>
+        <div class="content">
+          <div>
+            <div class="title">Les Sables-d’Olonne</div>
+            <p class="desc">Plage, port, promenade… une journée lumineuse qui fait du bien (et facile en famille).</p>
+            
+          </div>
+        </div>
+      </article>
+
+      <article class="proxi-card3" role="listitem" aria-label="Noirmoutier & marais salants">
+        <div class="bg" style="background-image:url('https://www.ile-noirmoutier.com/sites/default/files/header/Marais%20Salant%20-%20L%27Epine%20%C2%A9Office%20de%20Tourisme%20Ile%20de%20Noirmoutier-Vend%C3%A9e%20Expansion-Simon%20Bourcier.jpg');"></div>
+        <div class="shade" aria-hidden="true"></div>
+        <div class="content">
+          <div>
+            <div class="title">Noirmoutier & marais salants</div>
+            <p class="desc">Paysages ouverts, vélo, marais salants… parfait pour une escapade “grand air”.</p>
+            
+          </div>
+        </div>
+      </article>
+
+      <article class="proxi-card3" role="listitem" aria-label="La Cinéscénie (soir)">
+        <div class="bg" style="background-image:url('https://img3.jacqueson.com/cache/14463-1-1500-Spectacle-La-Cinescenie-au-Puy-du-Fou-1400x450.jpg');"></div>
+        <div class="shade" aria-hidden="true"></div>
+        <div class="content">
+          <div>
+            <div class="title">La Cinéscénie (soir)</div>
+            <p class="desc">Une soirée magique (si vous pouvez) : spectaculaire, émouvant, mémorable.</p>
+            
+          </div>
+        </div>
+      </article>
+    </div>
+
+    
+  </div>
+</section>
+
+    <!-- GALERIE -->
+    
+
+    <!-- ACCÈS + CARTE -->
+    <section id="acces">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Accès & carte</h2>
+            <p>
+              Le gîte se situe à <b>La Petite Barre</b>, sur la commune de <b>Pouzauges</b> (Vendée).
+              Cliquez sur “Itinéraire” pour ouvrir Google Maps.
+            </p>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="map-wrap" aria-label="Carte Google Maps">
+            <!-- Embed sans clé API (via l’URL q=...&output=embed). -->
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Carte : La Petite Barre, Pouzauges"
+              src="https://www.google.com/maps?q=La%20Petite%20Barre%20Pouzauges%2085700&output=embed">
+            </iframe>
+          </div>
+
+          <div class="contact-card" id="contact" aria-label="Contact et réservation">
+            <h3>Réserver / prendre rendez-vous</h3>
+            <p style="margin:0;color:var(--muted);">
+              Réservation <b>uniquement par téléphone</b> pour rester simple, rapide et humain.
+            </p>
+
+            <div class="contact-grid" role="list">
+              <div class="info" role="listitem">
+                <div class="ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92V21a1 1 0 0 1-1.09 1A19.88 19.88 0 0 1 3 5.09 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.27.95l-2.2 2.2a16 16 0 0 0 6.29 6.29l2.2-2.2a1 1 0 0 1 .95-.27l4 1a1 1 0 0 1 .75 1z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="k">Téléphone</div>
+                  <div class="v">
+                    <a href="tel:+33623012286" aria-label="Appeler le 06 23 01 22 86">06 23 01 22 86</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info" role="listitem">
+                <div class="ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s-6-4.35-6-10a6 6 0 0 1 12 0c0 5.65-6 10-6 10z"/>
+                    <circle cx="12" cy="11" r="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="k">Adresse</div>
+                  <div class="v">La Petite Barre, 85700 Pouzauges, Vendée</div>
+                </div>
+              </div>
+
+              <div class="info" role="listitem">
+                <div class="ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 20l4-16"/>
+                    <path d="M4 9h16"/>
+                    <path d="M4 15h16"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="k">Itinéraire</div>
+                  <div class="v">
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=La%20Petite%20Barre%20Pouzauges%2085700"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Ouvrir l'itinéraire Google Maps dans un nouvel onglet">
+                      Ouvrir Google Maps
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+
+            <div style="margin-top:auto; padding-top:12px; border-top:1px solid rgba(27,31,27,.10); color:var(--muted); font-size:13px;">
+              <b>Astuce :</b> pour le Puy du Fou, pensez à réserver tôt en haute saison et à prévoir 2 jours si vous voulez “tout voir” sans courir.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="foot">
+        <div>© <span id="y"></span> Gîte de La Petite Barre · Pouzauges (Vendée)</div>
+        <div class="links" aria-label="Liens utiles">
+          <a href="#top">Haut de page</a>
+          <a href="#acces">Accès</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal JS (date) — garde le fichier autonome
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+
+
+
+
+
+
+
+
+
+<script>
+(() => {
+  const main = document.querySelector('.carousel-thumb .ct-main');
+  const track = document.querySelector('.carousel-thumb .ct-track');
+  if (!main || !track) return;
+
+  const slides = track.querySelectorAll('img');
+  const thumbs = document.querySelectorAll('.carousel-thumb .ct-thumbs img');
+  const btnNext = document.querySelector('.carousel-thumb .ct-btn.next');
+  const btnPrev = document.querySelector('.carousel-thumb .ct-btn.prev');
+
+  let i = 0;
+
+  const update = () => {
+    track.style.transition = 'transform .35s ease';
+    track.style.transform = `translateX(-${i * 100}%)`;
+    thumbs.forEach(t => t.classList.remove('active'));
+    if (thumbs[i]) thumbs[i].classList.add('active');
+  };
+
+  btnNext?.addEventListener('click', (e) => { e.stopPropagation(); i = (i + 1) % slides.length; update(); });
+  btnPrev?.addEventListener('click', (e) => { e.stopPropagation(); i = (i - 1 + slides.length) % slides.length; update(); });
+
+  thumbs.forEach(t => t.addEventListener('click', () => { i = +t.dataset.i; update(); }));
+
+  // Swipe (touch + pointer)
+  let startX = 0, dx = 0, dragging = false;
+
+  const start = (x) => {
+    dragging = true;
+    startX = x;
+    dx = 0;
+    track.style.transition = 'none';
+  };
+  const move = (x) => {
+    if (!dragging) return;
+    dx = x - startX;
+    track.style.transform = `translateX(calc(-${i * 100}% + ${dx}px))`;
+  };
+  const end = () => {
+    if (!dragging) return;
+    dragging = false;
+    const w = main.clientWidth || 1;
+    if (dx < -w * 0.2) i = (i + 1) % slides.length;
+    else if (dx > w * 0.2) i = (i - 1 + slides.length) % slides.length;
+    update();
+  };
+
+  // Touch (iOS)
+  main.addEventListener('touchstart', (e) => start(e.touches[0].clientX), { passive: true });
+  main.addEventListener('touchmove', (e) => move(e.touches[0].clientX), { passive: true });
+  main.addEventListener('touchend', end);
+
+  // Pointer (Android/desktop)
+  main.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('.ct-btn')) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    main.setPointerCapture?.(e.pointerId);
+    start(e.clientX);
+  });
+  main.addEventListener('pointermove', (e) => move(e.clientX));
+  main.addEventListener('pointerup', end);
+  main.addEventListener('pointercancel', end);
+
+  update();
+})();
+</script>
+
+</body>
+</html>
