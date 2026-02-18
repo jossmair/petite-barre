@@ -7,9 +7,18 @@
   <title>Gîte à Pouzauges (Vendée) — La Petite Barre | Proche Puy du Fou</title>
   <meta name="description" content="Gîte chaleureux à La Petite Barre, Pouzauges (Vendée). Idéalement situé près du Puy du Fou et des plus belles escapades vendéennes. Réservation par téléphone." />
   <meta name="theme-color" content="#2f3b2f" />
+  <link rel="canonical" href="https://gitepetitebarre.fr/" />
   <meta property="og:title" content="Gîte à Pouzauges — La Petite Barre | Proche Puy du Fou" />
   <meta property="og:description" content="Un séjour campagne chic au cœur du bocage vendéen, à deux pas du Puy du Fou. Réservation par téléphone." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gitepetitebarre.fr/" />
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Gîte de La Petite Barre">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gîte à Pouzauges (Vendée) — La Petite Barre | Proche Puy du Fou">
+<meta name="twitter:description" content="Gîte chaleureux à La Petite Barre, Pouzauges (Vendée). Idéalement situé près du Puy du Fou. Réservation par téléphone.">
+<meta name="twitter:image" content="https://gitepetitebarre.fr/images/01.webp">
 
   <style>
     :root{
@@ -29,7 +38,50 @@
       --max: 1120px;
     }
 
-    *{ box-sizing:border-box; }
+    
+    /* Language switch */
+    .lang-switch{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      border:1px solid rgba(27,31,27,.14);
+      background: rgba(255,255,255,.70);
+      box-shadow: 0 8px 18px rgba(0,0,0,.06);
+    }
+    .lang-btn{
+      border:none;
+      background: transparent;
+      padding:8px 10px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:750;
+      font-size:13px;
+      color: rgba(27,31,27,.78);
+      transition: background .15s ease, color .15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lang-btn:hover{ background: rgba(47,107,63,.08); color: rgba(27,31,27,.92); }
+    .lang-btn.active{
+      background: linear-gradient(135deg, rgba(47,107,63,.98), rgba(31,59,74,.92));
+      color:#fff;
+      box-shadow: 0 10px 22px rgba(31,59,74,.16);
+    }
+
+
+
+    /* Mobile header fix (no desktop changes) */
+    @media (max-width: 640px){
+      header .head-inner{ flex-wrap: wrap; gap: 10px; }
+      header .brand{ flex: 1 1 100%; }
+      header nav{ flex: 1 1 100%; }
+      header .cta-row{ flex: 1 1 100%; justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+      .lang-switch{ padding: 5px; gap: 4px; }
+      .lang-btn{ padding: 7px 9px; font-size: 12px; }
+      header .btn.primary{ padding: 10px 12px; font-size: 13px; }
+    }
+*{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
     body{
       margin:0;
@@ -556,6 +608,234 @@
       color: var(--muted);
       font-size: 13px;
     }
+    .family-layout-panel{
+      margin-top:14px;
+      position:relative;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.72);
+      background:
+        radial-gradient(560px 220px at 8% 0%, rgba(47,107,63,.12), transparent 65%),
+        radial-gradient(560px 260px at 100% 120%, rgba(176,106,47,.12), transparent 65%),
+        var(--card);
+    }
+    .layout-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .layout-lead{
+      margin-top: 2px !important;
+      color: var(--muted) !important;
+      font-size: 14px !important;
+    }
+    .layout-tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(27,31,27,.12);
+      background: rgba(255,255,255,.78);
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(27,31,27,.82);
+      white-space: nowrap;
+    }
+    .layout-grid{
+      margin-top: 12px;
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:12px;
+    }
+    .layout-item{
+      border-radius: 16px;
+      border: 1px solid rgba(27,31,27,.10);
+      background: rgba(255,255,255,.84);
+      padding: 13px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+    }
+    .layout-badge{
+      display:inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      font-weight: 760;
+      color: #1f3b4a;
+      background: rgba(31,59,74,.12);
+      border: 1px solid rgba(31,59,74,.16);
+      margin-bottom: 8px;
+    }
+    .layout-item .k{
+      font-size: 13px;
+      font-weight: 760;
+      letter-spacing: .2px;
+      text-transform: uppercase;
+      color: rgba(27,31,27,.70);
+      margin-bottom: 6px;
+    }
+    .layout-points{
+      margin: 0;
+      padding-left: 17px;
+      color: rgba(27,31,27,.90);
+      font-size: 14px;
+    }
+    .layout-points li{
+      margin-bottom: 6px;
+      line-height:1.4;
+    }
+    .pricing-panel{
+      margin-top:14px;
+      border: 1px solid rgba(255,255,255,.74);
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      background:
+        radial-gradient(560px 230px at 0% 0%, rgba(31,59,74,.08), transparent 65%),
+        radial-gradient(560px 260px at 100% 120%, rgba(47,107,63,.10), transparent 68%),
+        var(--card);
+      position:relative;
+      overflow:hidden;
+    }
+    .pricing-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .pricing-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(31,59,74,.10);
+      border: 1px solid rgba(31,59,74,.16);
+      color: #1f3b4a;
+      font-size: 11px;
+      font-weight: 780;
+      letter-spacing: .25px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .pricing-lead{
+      margin-top: 6px !important;
+      color: var(--muted) !important;
+      font-size: 14px !important;
+      max-width: 50ch;
+    }
+    .pricing-grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:12px;
+    }
+    .season-group{
+      margin-top: 14px;
+    }
+    .season-title{
+      margin: 0 0 8px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .28px;
+      text-transform: uppercase;
+      color: rgba(27,31,27,.78);
+    }
+    .season-title .season-meta{
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .pricing-extra-note{
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 650;
+      color: rgba(27,31,27,.82);
+    }
+    .price-card.full-row{
+      grid-column: 1 / -1;
+    }
+    .price-card{
+      border-radius: 16px;
+      padding: 14px 14px 13px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(27,31,27,.10);
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+      position:relative;
+      overflow:hidden;
+    }
+    .price-card .dur{
+      display:inline-flex;
+      align-items:center;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .28px;
+      font-weight: 780;
+      margin-bottom: 8px;
+      color: rgba(27,31,27,.78);
+      background: rgba(31,59,74,.12);
+      border: 1px solid rgba(31,59,74,.15);
+    }
+    .price-card .val{
+      font-size: clamp(22px, 2.2vw, 28px);
+      line-height:1;
+      letter-spacing: -.4px;
+      font-weight: 800;
+      color: #16333f;
+    }
+    .price-card .hint{
+      margin-top: 8px;
+      color: rgba(27,31,27,.64);
+      font-size: 12px;
+      font-weight: 650;
+    }
+    .price-card.tier-a{
+      border-color: rgba(31,59,74,.20);
+    }
+    .price-card.tier-b{
+      border-color: rgba(47,107,63,.24);
+      box-shadow: 0 10px 24px rgba(47,107,63,.12);
+      background:
+        radial-gradient(220px 100px at 100% 0%, rgba(47,107,63,.10), transparent 72%),
+        rgba(255,255,255,.94);
+    }
+    .price-card.tier-b:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      border: 1px solid rgba(47,107,63,.16);
+      border-radius: 16px;
+    }
+    .pricing-notes{
+      margin-top:12px;
+
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .closed-note, .min-stay-note{
+      margin-top:0;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.82);
+      font-size: 13px;
+      font-weight: 650;
+      border: 1px dashed rgba(27,31,27,.20);
+    }
+    .closed-note{
+      border-color: rgba(176,106,47,.46);
+      color: rgba(27,31,27,.84);
+    }
+    .min-stay-note{
+      border-color: rgba(31,59,74,.34);
+      color: rgba(27,31,27,.82);
+    }
 
     /* CTA secondaire dans la section famille */
     .family-cta{
@@ -581,10 +861,16 @@
       .gallery-main img{ height: 360px; }
       .gallery-grid{ grid-template-columns: 1fr 1fr; }
       .gallery-grid img{ height: 220px; }
+      .layout-grid{ grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 620px){
       .gallery-grid{ grid-template-columns: 1fr; }
       .gallery-grid img{ height: 210px; }
+      .layout-grid{ grid-template-columns: 1fr; }
+      .layout-tag{ font-size:11px; }
+      .pricing-grid{ grid-template-columns: 1fr; }
+      .pricing-notes{ grid-template-columns: 1fr; }
+      .pricing-badge{ min-width: 0; }
     }
 
   
@@ -874,180 +1160,6 @@
   </style>
 
 <style>
-.carousel-simple{
-  position:relative;
-  margin-top:20px;
-  border-radius:24px;
-  overflow:hidden;
-}
-.cs-track{
-  display:flex;
-  transition:transform .4s ease;
-}
-.cs-track img{
-  width:100%;
-  flex:0 0 100%;
-  object-fit:cover;
-}
-.cs-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  border:none;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  font-size:26px;
-  cursor:pointer;
-}
-.cs-btn.prev{left:12px;}
-.cs-btn.next{right:12px;}
-</style>
-
-
-<style>
-.carousel-thumb{margin-top:20px}
-.ct-thumbs{
-  display:flex;
-  gap:10px;
-  margin-bottom:12px;
-}
-.ct-thumbs img{
-  width:120px;
-  height:80px;
-  object-fit:cover;
-  border-radius:14px;
-  cursor:pointer;
-  opacity:.6;
-  border:2px solid transparent;
-}
-.ct-thumbs img.active{
-  opacity:1;
-  border-color:#2f6b3f;
-}
-.ct-main{position:relative;
-  position:relative;
-  overflow:hidden;
-  border-radius:24px;
-}
-.ct-track{
-  display:flex;
-  transition:transform .4s ease;
-}
-.ct-track img{
-  width:100%;
-  flex:0 0 100%;
-  object-fit:cover;
-}
-.ct-main .ct-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  border:none;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  font-size:26px;
-  cursor:pointer;
-}
-.ct-main .ct-btn.prev{left:12px}
-.ct-main .ct-btn.next{right:12px}
-</style>
-
-
-<style>
-/* --- Carousel (responsive fix) --- */
-.carousel-thumb{margin-top:20px; width:100%; max-width:100%;}
-.ct-thumbs{
-  display:flex;
-  gap:10px;
-  margin-bottom:12px;
-  overflow-x:auto;
-  padding-bottom:4px;
-  scrollbar-width:thin;
-}
-.ct-thumbs img{
-  flex:0 0 auto;
-  width:120px;
-  height:80px;
-  object-fit:cover;
-  border-radius:14px;
-  cursor:pointer;
-  opacity:.6;
-  border:2px solid transparent;
-}
-.ct-thumbs img.active{
-  opacity:1;
-  border-color:rgba(47,107,63,.95);
-}
-.ct-main{position:relative;
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  border-radius:24px;
-  aspect-ratio: 16 / 9;
-  background: rgba(0,0,0,.04);
-}
-.ct-track{
-  display:flex;
-  height:100%;
-  transition:transform .4s ease;
-}
-.ct-track img{
-  width:100%;
-  height:100%;
-  flex:0 0 100%;
-  object-fit:cover;
-  display:block;
-}
-.ct-main .ct-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  border:none;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  font-size:0;
-  cursor:pointer;
-  z-index:5;
-  display:grid;
-  place-items:center;
-  -webkit-tap-highlight-color: transparent;
-}
-.ct-btn svg{width:18px;height:18px;fill:rgba(255,255,255,.95);}
-.ct-main .ct-btn.prev{left:12px}
-.ct-main .ct-btn.next{right:12px}
-.ct-btn:active{transform:translateY(-50%) scale(.98)}
-@media (max-width: 720px){
-  .ct-main{position:relative;border-radius:20px; aspect-ratio: 4 / 3;}
-  .ct-main .ct-btn{width:42px;height:42px}
-  .ct-thumbs img{width:92px;height:62px;border-radius:12px}
-}
-@media (max-width: 420px){
-  .ct-main .ct-btn{width:40px;height:40px;}
-  .ct-main .ct-btn.prev{left:10px; right:auto;}
-  .ct-main .ct-btn.next{right:10px; left:auto;}
-  .ct-thumbs img{width:84px;height:56px}
-}
-
-</style>
-
-
-<style>
-/* Safety net: hide any misplaced carousel buttons */
-.ct-btn { display:none !important; }
-.ct-main .ct-btn { display:grid !important; }
-</style>
-
-
-<style>
 /* ===== Carousel (miniatures au-dessus) ===== */
 .carousel-thumb{margin-top:14px; width:100%; max-width:100%;}
 .ct-thumbs{
@@ -1119,9 +1231,73 @@
 }
 </style>
 
+
+<meta property="og:image" content="https://gitepetitebarre.fr/images/01.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Gîte de La Petite Barre",
+  "url": "https://gitepetitebarre.fr/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "La Petite Barre",
+    "addressLocality": "Pouzauges",
+    "postalCode": "85700",
+    "addressRegion": "Vendée",
+    "addressCountry": "FR"
+  },
+  "telephone": "+33623012286",
+  "image": "https://gitepetitebarre.fr/images/01.webp",
+  "priceRange": "€€",
+  "description": "Gîte familial à La Petite Barre, Pouzauges (Vendée), proche du Puy du Fou. Réservation par téléphone.",
+  "hasMap": "https://www.google.com/maps?q=La%20Petite%20Barre%20Pouzauges%2085700",
+  "areaServed": ["Pouzauges", "Vendée", "Pays de la Loire"],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Adapté aux familles", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Proche du Puy du Fou", "value": true }
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment réserver le gîte à Pouzauges ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La réservation se fait uniquement par téléphone : un appel, nous vérifions les dates et confirmons ensemble."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le gîte est-il proche du Puy du Fou ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le gîte est idéalement situé pour visiter le Puy du Fou. En haute saison, deux jours sont recommandés pour en profiter sans courir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le gîte est-il adapté aux familles et bébés ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le gîte est pensé pour les familles : équipements bébé (lit bébé, chaise haute) selon disponibilité."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 
-<body>
+<body id="top">
   <!-- ====== Personnalisation rapide ======
        Nom du gîte     : Gîte de La Petite Barre
        Téléphone       : 06 00 00 00 00
@@ -1136,22 +1312,28 @@
           <div class="logo" aria-hidden="true"></div>
           <div>
             <div class="name">Gîte de La Petite Barre</div>
-            <div class="tag">Pouzauges · Vendée · Bocage</div>
+            <div class="tag" data-i18n="brand_tag">Pouzauges · Vendée · Bocage</div>
           </div>
         </a>
 
         <nav class="nav" aria-label="Navigation principale">
-          <a href="#gite">Le gîte</a>
-          <a href="#proximite">À proximité</a>
+          <a href="#gite" data-i18n="nav_gite">Le gîte</a>
+          <a href="#proximite" data-i18n="nav_nearby">À proximité</a>
           
-          <a href="#acces">Accès</a>
-          <a href="#contact">Contact</a>
+          <a href="#acces" data-i18n="nav_access_contact">Accès &amp; Contact</a>
+        
         </nav>
 
         <div class="cta-row">
-          <a class="btn primary" href="tel:+33623012286" aria-label="Appeler pour réserver">
+          <div class="lang-switch" role="group" aria-label="Choix de langue">
+  <button class="lang-btn active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+  <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+  <button class="lang-btn" type="button" data-lang="de" aria-pressed="false">DE</button>
+  <button class="lang-btn" type="button" data-lang="es" aria-pressed="false">ES</button>
+</div>
+          <a class="btn primary" href="tel:+33623012286" aria-label="Appeler pour réserver" data-i18n-attr="aria-label:call_aria">
             <span class="dot" aria-hidden="true"></span>
-            Appeler pour réserver
+            <span data-i18n="call_to_book">Appeler pour réserver</span>
           </a>
         </div>
       </div>
@@ -1171,37 +1353,34 @@
               <div>
               
 
-                <h1>Le calme du bocage, <br/>à deux pas des grands souvenirs.</h1>
-                <p>
-                  Bienvenue à <b>La Petite Barre</b>, à Pouzauges, au cœur de la Vendée.
-                  Un gîte chaleureux et moderne pour se ressourcer… et profiter du <b>Puy du Fou</b> et des plus belles escapades vendéennes.
-                </p>
+                <h1 data-i18n="hero_h1">Le calme du bocage, <br>à deux pas des grands souvenirs.</h1>
+                <p data-i18n="hero_intro">Bienvenue à <b>La Petite Barre</b>, à Pouzauges, au cœur de la Vendée. Un <b>gîte à Pouzauges</b> (Vendée), chaleureux et moderne, pour se ressourcer… et profiter du <b>Puy du Fou</b> et des plus belles escapades vendéennes.</p>
 
                 <div class="hero-actions" role="group" aria-label="Actions principales">
-                  <a class="btn primary" href="tel:+33600000000" aria-label="Appeler maintenant">
+                 <a class="btn primary" href="tel:+33623012286" aria-label="Appeler maintenant">
                     <span class="dot" aria-hidden="true"></span>
                     06 23 01 22 86
                   </a>
-                  <a class="btn" href="#acces" aria-label="Voir l'accès et la carte">
-                    Voir l’itinéraire
+                  <a class="btn" href="https://www.google.com/maps/dir/La+Petite+Barre,+85700+Pouzauges/Parking+A+-+Puy+du+Fou,+Parking+autocars,+85590+Les+Epesses/@46.8387694,-0.9507331,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4806f79319cc783f:0x6289040f0e2d08cd!2m2!1d-0.8151964!2d46.8015806!1m5!1m1!1s0x48065f201ee68237:0x1c0cafcabd505a2e!2m2!1d-0.9298772!2d46.8957284!3e0?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" aria-label="Itinéraire vers le Puy du Fou">
+                    <span data-i18n="see_route">Voir l’itinéraire</span>
                   </a>
                   <a class="btn" href="#proximite" aria-label="Voir les attractions à proximité">
-                    Idées de sorties
+                    <span data-i18n="ideas">Idées de sorties</span>
                   </a>
                 </div>
 
                 <div class="hero-stats" aria-label="Points forts">
                   <div class="stat">
                     <div class="k">~20 min</div>
-                    <div class="l">du Puy du Fou</div>
+                    <div class="l" data-i18n="stat_puy">du Puy du Fou</div>
                   </div>
                   <div class="stat">
-                    <div class="k">100% téléphone</div>
-                    <div class="l">réservation simple & directe</div>
+                    <div class="k" data-i18n="stat_phone_k">100% téléphone</div>
+                    <div class="l" data-i18n="stat_phone_l">réservation simple & directe</div>
                   </div>
                   <div class="stat">
-                    <div class="k">Bocage</div>
-                    <div class="l">nature · balades · douceur</div>
+                    <div class="k" data-i18n="stat_bocage_k">Bocage</div>
+                    <div class="l" data-i18n="stat_bocage_l">nature · balades · douceur</div>
                   </div>
                 </div>
               </div>
@@ -1213,10 +1392,10 @@
           <aside class="side" aria-label="Informations rapides">
             <div class="panel">
               <div class="pad">
-                <h2>Un séjour qui respire</h2>
+                <h2 data-i18n="panel_breathe_h2">Un séjour qui respire</h2>
                 <p>
-                  Un esprit <b>campagnard</b>, une touche <b>moderne</b>, et l’essentiel pour se sentir bien :
-                  douceur, simplicité, et proximité des sites incontournables.
+                  <span data-i18n="panel_breathe_p">Un esprit <b>campagnard</b>, une touche <b>moderne</b>, et l’essentiel pour se sentir bien :</span>
+                  <span data-i18n="panel_breathe_tail">douceur, simplicité, et proximité des sites incontournables.</span>
                 </p>
 
                 <div class="list" aria-label="Avantages">
@@ -1228,8 +1407,8 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="t">Pouzauges, Vendée</div>
-                      <div class="d">Base idéale pour rayonner : Puy du Fou, bocage, marais, côte.</div>
+                      <div class="t" data-i18n="item_place_t">Pouzauges, Vendée</div>
+                      <div class="d" data-i18n="item_place_d">Base idéale pour rayonner : Puy du Fou, bocage, marais, côte.</div>
                     </div>
                   </div>
 
@@ -1240,8 +1419,8 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="t">Réservation par téléphone</div>
-                      <div class="d">Simple : un appel, des réponses claires, et on valide ensemble votre séjour.</div>
+                      <div class="t" data-i18n="item_phone_t">Réservation par téléphone</div>
+                      <div class="d" data-i18n="item_phone_d">Simple : un appel, des réponses claires, et on valide ensemble votre séjour.</div>
                     </div>
                   </div>
 
@@ -1254,8 +1433,8 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="t">Ambiance chaleureuse</div>
-                      <div class="d">Lumineux, confortable, pensé pour se retrouver et ralentir.</div>
+                      <div class="t" data-i18n="item_warm_t">Ambiance chaleureuse</div>
+                      <div class="d" data-i18n="item_warm_d">Lumineux, confortable, pensé pour se retrouver et ralentir.</div>
                     </div>
                   </div>
                 </div>
@@ -1266,14 +1445,14 @@
 
             <div class="panel">
               <div class="pad">
-                <h2>En bref</h2>
+                <h2 data-i18n="brief_h2">En bref</h2>
                 <div class="chip-row" aria-label="Caractéristiques (à personnaliser)">
-                  <span class="chip"><b>✔</b> Campagne</span>
-                  <span class="chip"><b>✔</b> Proche Puy du Fou</span>
-                  <span class="chip"><b>✔</b> Calme</span>
-                  <span class="chip"><b>✔</b> Accès facile</span>
-				  <span class="chip"><b>✔</b> En famille</span>
-                  <span class="chip"><b>✔</b> Séjour détente</span>
+                  <span class="chip" data-i18n="chip_country"><b>✔</b> Campagne</span>
+                  <span class="chip" data-i18n="chip_puy"><b>✔</b> Proche Puy du Fou</span>
+                  <span class="chip" data-i18n="chip_calm"><b>✔</b> Calme</span>
+                  <span class="chip" data-i18n="chip_easy"><b>✔</b> Accès facile</span>
+				  <span class="chip" data-i18n="chip_family"><b>✔</b> En famille</span>
+                  <span class="chip" data-i18n="chip_relax"><b>✔</b> Séjour détente</span>
                 </div>
               </div>
             </div>
@@ -1287,9 +1466,9 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Un gîte pensé pour les familles</h2>
+            <h2 data-i18n="gite_h2">Un gîte pensé pour les familles - 4 à 8 personnes -</h2>
             <p>
-              Vous venez avec des enfants (ou un bébé) ? Ici, tout est fait pour que ce soit <b>simple</b> :
+              <span data-i18n="gite_intro">Vous venez avec des enfants (ou un bébé) ? Ici, tout est fait pour que ce soit <b>simple</b> :</span>
               on arrive, on pose les valises, et on profite.
             </p>
           </div>
@@ -1300,8 +1479,8 @@
           <div class="family-panel" aria-label="Galerie du gîte">
             <div class="pad" style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;">
               <div>
-                <h3 style="margin:0 0 6px; font-size:18px;">Galerie du gîte</h3>
-                <p style="margin:0;">Pièce de vie, cuisine équipée, chambres et extérieur — l’essentiel en un coup d’œil.</p>
+                <h3 style="margin:0 0 6px; font-size:18px;" data-i18n="gallery_h3">Galerie du gîte</h3>
+                <p style="margin:0;"><span data-i18n="gallery_p">Pièce de vie, cuisine équipée, chambres et extérieur — l’essentiel en un coup d’œil.</span></p>
               </div>
               
             </div>
@@ -1310,49 +1489,44 @@
              
 <div class="carousel-thumb" aria-label="Galerie photos du gîte">
   <div class="ct-thumbs" aria-label="Miniatures">
-    <img src="images/01.webp" data-i="0" alt="">
-    <img src="images/02.webp" data-i="1" alt="">
-    <img src="images/03.webp" data-i="2" alt="">
-    <img src="images/04.webp" data-i="3" alt="">
-    <img src="images/05.webp" data-i="4" alt="">
-    <img src="images/06.webp" data-i="5" alt="">
-    <img src="images/07.webp" data-i="6" alt="">
-    <img src="images/08.webp" data-i="7" alt="">
-    <img src="images/09.webp" data-i="8" alt="">
-    <img src="images/10.webp" data-i="9" alt="">
-    <img src="images/11.webp" data-i="10" alt="">
-    <img src="images/12.webp" data-i="11" alt="">
-    <img src="images/13.webp" data-i="12" alt="">
-    <img src="images/14.webp" data-i="13" alt="">
+    <img src="images/01.webp" data-i="0" alt="Miniature photo 1 du gîte" decoding="async">
+    <img src="images/02.webp" data-i="1" alt="Miniature photo 2 du gîte" decoding="async" loading="lazy">
+    <img src="images/03.webp" data-i="2" alt="Miniature photo 3 du gîte" decoding="async" loading="lazy">
+    <img src="images/04.webp" data-i="3" alt="Miniature photo 4 du gîte" decoding="async" loading="lazy">
+    <img src="images/05.webp" data-i="4" alt="Miniature photo 5 du gîte" decoding="async" loading="lazy">
+    <img src="images/06.webp" data-i="5" alt="Miniature photo 6 du gîte" decoding="async" loading="lazy">
+    <img src="images/07.webp" data-i="6" alt="Miniature photo 7 du gîte" decoding="async" loading="lazy">
+    <img src="images/08.webp" data-i="7" alt="Miniature photo 8 du gîte" decoding="async" loading="lazy">
+    <img src="images/09.webp" data-i="8" alt="Miniature photo 9 du gîte" decoding="async" loading="lazy">
+    <img src="images/10.webp" data-i="9" alt="Miniature photo 10 du gîte" decoding="async" loading="lazy">
+    <img src="images/11.webp" data-i="10" alt="Miniature photo 11 du gîte" decoding="async" loading="lazy">
   </div>
 
   <div class="ct-main">
-    <button class="ct-btn prev" type="button" aria-label="Photo précédente">
+    <button class="ct-btn prev" type="button" aria-label="Previous photo" data-i18n-attr="aria-label:prev_photo">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M15.5 19.5a1 1 0 0 1-.7-.3l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 1 1 1.4 1.4L10.9 11l6 6a1 1 0 0 1-.7 1.7Z"/>
       </svg>
     </button>
-    <button class="ct-btn next" type="button" aria-label="Photo suivante">
+    <button class="ct-btn next" type="button" aria-label="Next photo" data-i18n-attr="aria-label:next_photo">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M8.5 19.5a1 1 0 0 1-.7-1.7l6-6-6-6a1 1 0 1 1 1.4-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-.7.3Z"/>
       </svg>
     </button>
 
     <div class="ct-track">
-      <img src="images/01.webp" alt="">
-      <img src="images/02.webp" alt="">
-      <img src="images/03.webp" alt="">
-      <img src="images/04.webp" alt="">
-      <img src="images/05.webp" alt="">
-      <img src="images/06.webp" alt="">
-      <img src="images/07.webp" alt="">
-      <img src="images/08.webp" alt="">
-      <img src="images/09.webp" alt="">
-      <img src="images/10.webp" alt="">
-      <img src="images/11.webp" alt="">
-      <img src="images/12.webp" alt="">
-      <img src="images/13.webp" alt="">
-      <img src="images/14.webp" alt="">
+      <img src="images/01.webp" alt="Photo 1 du gîte à La Petite Barre" decoding="async">
+      <img src="images/02.webp" alt="Photo 2 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/03.webp" alt="Photo 3 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/04.webp" alt="Photo 4 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/05.webp" alt="Photo 5 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/06.webp" alt="Photo 6 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/07.webp" alt="Photo 7 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/08.webp" alt="Photo 8 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/09.webp" alt="Photo 9 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/10.webp" alt="Photo 10 du gîte à La Petite Barre" decoding="async" loading="lazy">
+      <img src="images/11.webp" alt="Photo 11 du gîte à La Petite Barre" decoding="async" loading="lazy">
+
     </div>
   </div>
 </div>
@@ -1366,33 +1540,114 @@
           <div class="family-panel" aria-label="Prestations sur place">
             <div class="pad family-features">
               <div>
-                <h3 style="margin:0 0 6px; font-size:18px;">Tout est prévu sur place</h3>
+                <h3 style="margin:0 0 6px; font-size:18px;" data-i18n="onsite_h3">Tout est prévu sur place</h3>
                 <p style="margin:0;">
-                  L’objectif : vous éviter les “on a oublié…” et rendre le séjour confortable pour toute la tribu.
+                  <span data-i18n="onsite_p">L’objectif : vous éviter les “on a oublié…” et rendre le séjour confortable pour toute la tribu.</span>
                 </p>
 
                 <ul class="feature-list">
-                  <li><b>Cuisine & repas</b> : vaisselle complète, casseroles, plats, verres, couverts, et tout le nécessaire pour cuisiner au quotidien.</li>
-                  <li><b>Pour les enfants</b> : espace pour jouer, jeux et livres, ambiance calme et rassurante.</li>
-                  <li><b>Pour les bébés</b> : lit bébé, chaise haute et de quoi s’installer facilement.</li>
-                  <li><b>Confort</b> : literie soignée, rangements, chauffage, maison facile à vivre — on se sent vite “comme chez soi”.</li>
-                  <li><b>Extérieur</b> : de l’air, de la verdure, et un cadre paisible pour se détendre (et laisser les enfants souffler).</li>
+                  <li data-i18n='feat_kitchen'><b>Cuisine & repas</b> : vaisselle complète, casseroles, plats, verres, couverts, et tout le nécessaire pour cuisiner au quotidien.</li>
+                  <li data-i18n='feat_kids'><b>Pour les enfants</b> : espace pour jouer, jeux et livres, ambiance calme et rassurante.</li>
+                  <li data-i18n='feat_baby'><b>Pour les bébés</b> : lit bébé, chaise haute, barrière et baignoire bébé.</li>
+                  <li data-i18n='feat_comfort'><b>Confort</b> : linge de lit et toilette fourni, wi-fi gratuite, rangements, chauffage.</li>
+                  <li data-i18n='feat_appliances'><b>Électroménager</b> : lave-linge, lave-vaisselle, four, micro-ondes, sèche-cheveux.</li>
                 </ul>
 
                 <div class="chip-row" aria-label="Points forts famille">
-                  <span class="chip"><b>✔</b> Arrivée simple</span>
-                  <span class="chip"><b>✔</b> Cuisine équipée</span>
-                  <span class="chip"><b>✔</b> Enfants & bébés</span>
-                  <span class="chip"><b>✔</b> Calme</span>
+                  <span class="chip" data-i18n="fam_chip_arrival"><b>✔</b> Arrivée simple</span>
+                  <span class="chip" data-i18n="fam_chip_kitchen"><b>✔</b> Cuisine équipée</span>
+                  <span class="chip" data-i18n="fam_chip_kids"><b>✔</b> Enfants & bébés</span>
+                  <span class="chip" data-i18n="chip_calm"><b>✔</b> Calme</span>
+                  <span class="chip" data-i18n="fam_chip_layout"><b>✔</b> Linge fourni</span>
                 </div>
 
                 
               </div>
 
               <div class="feature-note">
-                <b>Astuce famille :</b> pour le Puy du Fou, prévoir de bonnes chaussures et (si possible) deux jours en haute saison.
+                <span data-i18n="family_tip"><b>Astuce famille :</b> pour le Puy du Fou, prévoir de bonnes chaussures et (si possible) deux jours en haute saison.</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="family-panel family-layout-panel" aria-label="Agencement et couchages" data-i18n-attr="aria-label:layout_panel_aria">
+          <div class="pad">
+            <div class="layout-head">
+              <div>
+                <h3 style="margin:0 0 4px; font-size:18px;" data-i18n="layout_h3">Agencement & couchages</h3>
+                <p class="layout-lead" data-i18n="layout_lead">Simple, lisible, et pratique pour une réservation en famille.</p>
+              </div>
+
+            </div>
+            <div class="layout-grid">
+              <article class="layout-item" aria-label="Rez-de-chaussée" data-i18n-attr="aria-label:layout_ground_aria">
+                <div class="layout-badge" data-i18n="layout_ground_badge">rez-de-chaussée</div>
+           
+                <ul class="layout-points">
+                  <li data-i18n="layout_ground_li1">Grande pièce de vie <b>salon + cuisine</b></li>
+                  <li data-i18n="layout_ground_li2">Entrée avec <b>placard + évier</b></li>
+                  <li data-i18n="layout_ground_li3"><b>1 WC</b> au rez-de-chaussée</li>
+                </ul>
+              </article>
+              <article class="layout-item" aria-label="Étage" data-i18n-attr="aria-label:layout_up_aria">
+                <div class="layout-badge" data-i18n="layout_up_badge">étage</div>
+
+                <ul class="layout-points">
+                  <li data-i18n="layout_up_li1"><b>2 chambres</b></li>
+                  <li data-i18n="layout_up_li2"><b>Petit salon TV</b> sur la mezzanine</li>
+                  <li data-i18n="layout_up_li3"><b>Salle de douche + WC</b></li>
+                </ul>
+              </article>
+              <article class="layout-item" aria-label="Couchages complémentaires" data-i18n-attr="aria-label:layout_sleep_aria">
+                <div class="layout-badge" data-i18n="layout_sleep_badge">Couchages +</div>
+                <ul class="layout-points">
+                  <li data-i18n="layout_sleep_li1"><b>2 lits simples</b> sur la mezzanine</li>
+                  <li data-i18n="layout_sleep_li2"><b>Canapé convertible</b> dans le petit salon d’étage</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="family-panel pricing-panel" aria-label="Tarifs et disponibilité" data-i18n-attr="aria-label:pricing_panel_aria">
+          <div class="pad">
+            <div class="pricing-head">
+              <h3 style="margin:1; font-size:18px;" data-i18n="pricing_h3">Tarifs & disponibilité</h3>
+
+            </div>
+            <div class="season-group">
+              <div class="season-title" data-i18n="pricing_low_title">Basse saison <span class="season-meta">(fermé de novembre à fin mars)</span></div>
+            </div>
+
+            <div class="season-group">
+              <div class="season-title" data-i18n="pricing_mid_title">Moyenne saison <span class="season-meta">(d’avril à fin juin et de septembre à fin octobre)</span></div>
+              <div class="min-stay-note" data-i18n="pricing_min_stay">2 nuitées minimums.</div>
+              <div class="pricing-grid">
+                <article class="price-card tier-a" aria-label="Tarif 2 à 4 nuitées" data-i18n-attr="aria-label:pricing_tier1_aria">
+                  <div class="dur" data-i18n="pricing_tier1_dur">2 à 4 nuitées</div>
+                  <div class="val" data-i18n="pricing_tier1_price">120€ / nuit</div>
+                  <div class="hint" data-i18n="pricing_tier1_hint">Séjour court</div>
+                </article>
+                <article class="price-card tier-a" aria-label="Tarif 5 nuitées et plus" data-i18n-attr="aria-label:pricing_tier2_aria">
+                  <div class="dur" data-i18n="pricing_tier2_dur">5 nuitées et +</div>
+                  <div class="val" data-i18n="pricing_tier2_price">100€ / nuit</div>
+                  <div class="hint" data-i18n="pricing_tier2_hint">Tarif avantageux</div>
+                </article>
+              </div>
+            </div>
+
+            <div class="season-group">
+              <div class="season-title" data-i18n="pricing_high_title">Haute saison <span class="season-meta">(juillet & août)</span></div>
+              <div class="pricing-grid">
+                <article class="price-card tier-b full-row" aria-label="Tarif semaine haute saison" data-i18n-attr="aria-label:pricing_tier3_aria">
+                  <div class="dur" data-i18n="pricing_tier3_dur">Semaine</div>
+                  <div class="val" data-i18n="pricing_tier3_price">700€ / semaine</div>
+                  <div class="hint" data-i18n="pricing_tier3_hint">Du samedi au samedi</div>
+                </article>
+              </div>
+            </div>
+            <div class="pricing-extra-note" data-i18n="pricing_extra_fees">Le forfait ménage est déjà inclus dans les prestations et la taxe de séjour est de 1.40€ par personne.</div>
           </div>
         </div>
       </div>
@@ -1403,66 +1658,66 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Autour du gîte : des sorties faciles à faire en famille</h2>
+        <h2 data-i18n="nearby_h2">Autour du gîte : des sorties faciles à faire en famille</h2>
         <p>
-          Vous êtes bien placé pour <b>le Puy du Fou</b>… et pour varier entre bocage, nature et une journée “océan”.
+          <span data-i18n="nearby_p">Vous êtes bien placé pour <b>le Puy du Fou</b>… et pour varier entre bocage, nature et une journée “océan”.</span>
         </p>
       </div>
     </div>
 
     <div class="proxi-wrap">
       <article class="proxi-feature" aria-label="Focus : Puy du Fou">
-        <div class="bg" style="background-image:url('https://www.vendeebocage.fr/app/uploads/2023/02/saison2023-logo-hd-1-1024x776.webp');"></div>
+        <div class="bg" style="background-image:url('images/proxi-puy-du-fou.webp');"></div>
         <div class="shade" aria-hidden="true"></div>
 
         <div class="content">
           <div>
             
-            <h3>Le Puy du Fou</h3>
+            <h3 data-i18n="puy_h3">Le Puy du Fou</h3>
             <p>
-              Une journée (ou deux) qui met tout le monde d’accord : spectacles grandioses,
+              <span data-i18n="puy_p">Une journée (ou deux) qui met tout le monde d’accord : spectacles grandioses,</span>
               décors immersifs, et souvenirs garantis.
             </p>
 
             <ul class="proxi-bullets">
-              <li><b>Famille-friendly</b> : émotions + pauses possibles.</li>
-              <li><b>Astuce</b> : venir tôt / réserver en avance en haute saison.</li>
-              <li><b>Option</b> : 2 jours si vous voulez “tout voir” sans courir.</li>
+              <li data-i18n="puy_li1"><b>Famille-friendly</b> : émotions + pauses possibles.</li>
+              <li data-i18n="puy_li2"><b>Astuce</b> : venir tôt / réserver en avance en haute saison.</li>
+              <li data-i18n="puy_li3"><b>Option</b> : 2 jours si vous voulez “tout voir” sans courir.</li>
             </ul>
 
             
           </div>
 
           <div class="proxi-actions" aria-label="Actions Puy du Fou">
-            <a class="btn primary" href="tel:+33600000000" aria-label="Appeler pour réserver">
+            <a class="btn primary" href="https://www.puydufou.com/france/fr" target="_blank" rel="noopener" aria-label="Réserver en ligne" data-i18n-attr="aria-label:reserve_online_aria">
               <span class="dot" aria-hidden="true"></span>
-              Appeler pour réserver
+              <span data-i18n="reserve_online">Réserver en ligne</span>
             </a>
-            <a class="btn" href="#acces" aria-label="Voir l'accès et la carte">Voir l’itinéraire</a>
+            <a class="btn" href="https://www.google.com/maps/dir/La+Petite+Barre,+85700+Pouzauges/Parking+A+-+Puy+du+Fou,+Parking+autocars,+85590+Les+Epesses/@46.8387694,-0.9507331,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4806f79319cc783f:0x6289040f0e2d08cd!2m2!1d-0.8151964!2d46.8015806!1m5!1m1!1s0x48065f201ee68237:0x1c0cafcabd505a2e!2m2!1d-0.9298772!2d46.8957284!3e0?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" aria-label="Itinéraire vers le Puy du Fou"><span data-i18n="see_route">Voir l’itinéraire</span></a>
           </div>
         </div>
       </article>
 
       <aside class="proxi-side" aria-label="Autres idées de sorties">
         <div class="proxi-tile" aria-label="Pouzauges et bocage">
-          <div class="bg" style="background-image:url('https://www.vendee-maraispoitevin.com/app/uploads/fontenay-vendee-tourisme/2023/05/thumbs/Bocage-Vendeen-vue-aerienne-1920x960-crop-1684852264.jpg');"></div>
+          <div class="bg" style="background-image:url('images/proxi-bocage.jpg');"></div>
           <div class="shade" aria-hidden="true"></div>
           <div class="content">
             <div>
-              <h4>Pouzauges & bocage</h4>
-              <p>Balades, points de vue, patrimoine : parfait pour une fin de journée tranquille.</p>
+              <h4 data-i18n="tile_bocage_h4">Pouzauges & bocage</h4>
+              <p data-i18n="tile_bocage_p"><span data-i18n="tile_bocage_p">Balades, points de vue, patrimoine : parfait pour une fin de journée tranquille.</span></p>
             </div>
            
           </div>
         </div>
 
         <div class="proxi-tile" aria-label="Journée nature : Marais Poitevin">
-          <div class="bg" style="background-image:url('https://i0.wp.com/blog.mappy.com/wp-content/uploads/2023/04/2ada7-marais-poitevin.png?fit=1100%2C500&ssl=1');"></div>
+          <div class="bg" style="background-image:url('images/proxi-marais-poitevin.png');"></div>
           <div class="shade" aria-hidden="true"></div>
           <div class="content">
             <div>
-              <h4>Marais Poitevin</h4>
-              <p>Canaux, barques, “Venise Verte” : une sortie nature dépaysante, très appréciée des familles.</p>
+              <h4 data-i18n="tile_marais_h4">Marais Poitevin</h4>
+              <p data-i18n="tile_marais_p"><span data-i18n="tile_marais_p">Canaux, barques, “Venise Verte” : une sortie nature dépaysante, très appréciée des familles.</span></p>
             </div>
             
           </div>
@@ -1472,36 +1727,36 @@
 
     <div class="proxi-cards3" role="list" aria-label="Autres escapades">
       <article class="proxi-card3" role="listitem" aria-label="Les Sables-d’Olonne">
-        <div class="bg" style="background-image:url('https://www.moulindelasalle.com/wp-content/uploads/2025/01/2023_Paysage_CoteSauvage_PlagedesGraviers_LesSablesdOlonne_EnVendee_395-1.jpg');"></div>
+        <div class="bg" style="background-image:url('images/proxi-sables-olonne.jpg');"></div>
         <div class="shade" aria-hidden="true"></div>
         <div class="content">
           <div>
-            <div class="title">Les Sables-d’Olonne</div>
-            <p class="desc">Plage, port, promenade… une journée lumineuse qui fait du bien (et facile en famille).</p>
+            <div class="title" data-i18n="card_sables_t">Les Sables-d’Olonne</div>
+            <p class="desc" data-i18n="card_sables_d">Plage, port, promenade… une journée lumineuse qui fait du bien (et facile en famille).</p>
             
           </div>
         </div>
       </article>
 
-      <article class="proxi-card3" role="listitem" aria-label="Noirmoutier & marais salants">
-        <div class="bg" style="background-image:url('https://www.ile-noirmoutier.com/sites/default/files/header/Marais%20Salant%20-%20L%27Epine%20%C2%A9Office%20de%20Tourisme%20Ile%20de%20Noirmoutier-Vend%C3%A9e%20Expansion-Simon%20Bourcier.jpg');"></div>
+      <article class="proxi-card3" role="listitem" aria-label="Tiffauges & château médiéval">
+        <div class="bg" style="background-image:url('images/proxi-tiffauges.jpg');"></div>
         <div class="shade" aria-hidden="true"></div>
         <div class="content">
           <div>
-            <div class="title">Noirmoutier & marais salants</div>
-            <p class="desc">Paysages ouverts, vélo, marais salants… parfait pour une escapade “grand air”.</p>
+            <div class="title" data-i18n="card_Tiffauges_t">Tiffauges & château médiéval</div>
+            <p class="desc" data-i18n="card_Tiffauges_d">Histoire vivante, remparts, animations médiévales… une immersion unique au cœur du Moyen Âge.</p>
             
           </div>
         </div>
       </article>
 
       <article class="proxi-card3" role="listitem" aria-label="La Cinéscénie (soir)">
-        <div class="bg" style="background-image:url('https://img3.jacqueson.com/cache/14463-1-1500-Spectacle-La-Cinescenie-au-Puy-du-Fou-1400x450.jpg');"></div>
+        <div class="bg" style="background-image:url('images/proxi-cinescenie.jpg');"></div>
         <div class="shade" aria-hidden="true"></div>
         <div class="content">
           <div>
-            <div class="title">La Cinéscénie (soir)</div>
-            <p class="desc">Une soirée magique (si vous pouvez) : spectaculaire, émouvant, mémorable.</p>
+            <div class="title" data-i18n="card_cine_t">La Cinéscénie (soir)</div>
+            <p class="desc" data-i18n="card_cine_d">Une soirée magique (si vous pouvez) : spectaculaire, émouvant, mémorable.</p>
             
           </div>
         </div>
@@ -1520,10 +1775,10 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Accès & carte</h2>
+            <h2 data-i18n="access_h2">Accès & carte</h2>
             <p>
-              Le gîte se situe à <b>La Petite Barre</b>, sur la commune de <b>Pouzauges</b> (Vendée).
-              Cliquez sur “Itinéraire” pour ouvrir Google Maps.
+              <span data-i18n="access_p1">Le gîte se situe à <b>La Petite Barre</b>, sur la commune de <b>Pouzauges</b> (Vendée).</span>
+              <span data-i18n="access_p2">Cliquez sur “Itinéraire” pour ouvrir Google Maps.</span>
             </p>
           </div>
         </div>
@@ -1534,15 +1789,15 @@
             <iframe
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="Carte : La Petite Barre, Pouzauges"
+              title="Map: La Petite Barre, Pouzauges" data-i18n-attr="title:map_title"
               src="https://www.google.com/maps?q=La%20Petite%20Barre%20Pouzauges%2085700&output=embed">
             </iframe>
           </div>
 
           <div class="contact-card" id="contact" aria-label="Contact et réservation">
-            <h3>Réserver / prendre rendez-vous</h3>
+            <h3 data-i18n="contact_h3">Réserver / prendre rendez-vous</h3>
             <p style="margin:0;color:var(--muted);">
-              Réservation <b>uniquement par téléphone</b> pour rester simple, rapide et humain.
+              <span data-i18n="contact_p">Réservation <b>uniquement par téléphone</b> pour rester simple, rapide et humain.</span>
             </p>
 
             <div class="contact-grid" role="list">
@@ -1553,7 +1808,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="k">Téléphone</div>
+                  <div class="k" data-i18n="phone_k">Téléphone</div>
                   <div class="v">
                     <a href="tel:+33623012286" aria-label="Appeler le 06 23 01 22 86">06 23 01 22 86</a>
                   </div>
@@ -1568,7 +1823,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="k">Adresse</div>
+                  <div class="k" data-i18n="address_k">Adresse</div>
                   <div class="v">La Petite Barre, 85700 Pouzauges, Vendée</div>
                 </div>
               </div>
@@ -1582,14 +1837,14 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="k">Itinéraire</div>
+                  <div class="k" data-i18n="route_k">Itinéraire</div>
                   <div class="v">
                     <a
                       href="https://www.google.com/maps/dir/?api=1&destination=La%20Petite%20Barre%20Pouzauges%2085700"
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Ouvrir l'itinéraire Google Maps dans un nouvel onglet">
-                      Ouvrir Google Maps
+                      <span data-i18n="open_maps">Ouvrir Google Maps</span>
                     </a>
                   </div>
                 </div>
@@ -1599,7 +1854,7 @@
            
 
             <div style="margin-top:auto; padding-top:12px; border-top:1px solid rgba(27,31,27,.10); color:var(--muted); font-size:13px;">
-              <b>Astuce :</b> pour le Puy du Fou, pensez à réserver tôt en haute saison et à prévoir 2 jours si vous voulez “tout voir” sans courir.
+              <span data-i18n="contact_tip"><b>Astuce :</b> pour le Puy du Fou, pensez à réserver tôt en haute saison et à prévoir 2 jours si vous voulez “tout voir” sans courir.</span>
             </div>
           </div>
         </div>
@@ -1612,11 +1867,11 @@
   <footer role="contentinfo">
     <div class="container">
       <div class="foot">
-        <div>© <span id="y"></span> Gîte de La Petite Barre · Pouzauges (Vendée)</div>
+        <div>© <span id="y"></span> <span data-i18n="footer_copy">Gîte de La Petite Barre · Pouzauges (Vendée)</span></div>
         <div class="links" aria-label="Liens utiles">
-          <a href="#top">Haut de page</a>
-          <a href="#acces">Accès</a>
-          <a href="#contact">Contact</a>
+          <a href="#top" data-i18n="foot_top">Haut de page</a>
+          <a href="#acces" data-i18n="nav_access_contact">Accès &amp; Contact</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
         </div>
       </div>
     </div>
@@ -1701,6 +1956,617 @@
   main.addEventListener('pointercancel', end);
 
   update();
+})();
+</script>
+
+
+<script>
+(() => {
+  const dict = {
+    fr: {
+      brand_tag: "Pouzauges · Vendée · Bocage",
+      nav_gite: "Le gîte",
+      nav_nearby: "À proximité",
+      nav_access: "Accès",
+      nav_contact: "Contact",
+      call_to_book: "Appeler pour réserver",
+      reserve_online: "Réserver en ligne",
+      reserve_online_aria: "Réserver en ligne",
+      hero_h1: "Le calme du bocage, <br/>à deux pas des grands souvenirs.",
+      hero_p: "Un <b>gîte à Pouzauges</b> (Vendée), chaleureux et moderne, pour se ressourcer… et profiter du <b>Puy du Fou</b> et des plus belles escapades vendéennes.",
+      see_route: "Voir l’itinéraire",
+      ideas: "Idées de sorties",
+      stat_puy: "du Puy du Fou",
+      stat_phone_k: "100% téléphone",
+      stat_phone_l: "réservation simple & directe",
+      stat_bocage_k: "Bocage",
+      stat_bocage_l: "nature · balades · douceur",
+      panel_breathe_h2: "Un séjour qui respire",
+      panel_breathe_p: "Un esprit <b>campagnard</b>, une touche <b>moderne</b>, et l’essentiel pour se sentir bien :",
+      panel_breathe_tail: "douceur, simplicité, et proximité des sites incontournables.",
+      item_phone_t: "Réservation par téléphone",
+      item_phone_d: "Simple : un appel, des réponses claires, et on valide ensemble votre séjour.",
+      brief_h2: "En bref",
+      gite_h2: "Un gîte pensé pour les familles - 4 à 8 personnes -",
+      gite_intro: "Vous venez avec des enfants (ou un bébé) ? Ici, tout est fait pour que ce soit <b>simple</b> :",
+      gallery_h3: "Galerie du gîte",
+      gallery_p: "Pièce de vie, cuisine équipée, chambres et extérieur — l’essentiel en un coup d’œil.",
+      onsite_h3: "Tout est prévu sur place",
+      onsite_p: "L’objectif : vous éviter les “on a oublié…” et rendre le séjour confortable pour toute la tribu.",
+      feat_kitchen: "<b>Cuisine & repas</b> : vaisselle complète, casseroles, plats, verres, couverts, et tout le nécessaire pour cuisiner au quotidien.",
+      feat_kids: "<b>Pour les enfants</b> : espace pour jouer, jeux et livres, ambiance calme et rassurante.",
+      feat_baby: "<b>Pour les bébés</b> : lit bébé, chaise haute, barrière et baignoire bébé.",
+      feat_comfort: "<b>Confort</b> : linge de lit et de toilette fourni, wi-fi gratuite, rangements, chauffage.",
+      feat_appliances: "<b>Électroménager</b> : lave-linge, lave-vaisselle, four, micro-ondes, sèche-cheveux.",
+      layout_panel_aria: "Agencement et couchages",
+      layout_h3: "Agencement & couchages",
+      layout_lead: "Simple, lisible, et pratique pour une réservation en famille.",
+      layout_tag: "Organisation claire",
+      layout_ground_aria: "Rez-de-chaussée",
+      layout_ground_badge: "rez-de-chaussée",
+      layout_ground_k: "Rez-de-chaussée",
+      layout_ground_li1: "Grande pièce de vie <b>salon + cuisine</b>",
+      layout_ground_li2: "Entrée avec <b>placard + évier</b>",
+      layout_ground_li3: "<b>1 WC</b> au rez-de-chaussée",
+      layout_up_aria: "Étage",
+      layout_up_badge: "étage",
+      layout_up_k: "Étage",
+      layout_up_li1: "<b>2 chambres</b>",
+      layout_up_li2: "<b>Petit salon TV</b> sur la mezzanine",
+      layout_up_li3: "<b>Salle de bain + WC</b>",
+      layout_sleep_aria: "Couchages complémentaires",
+      layout_sleep_badge: "Couchages +",
+      layout_sleep_k: "Couchages +",
+      layout_sleep_li1: "<b>2 lits simples</b> sur la mezzanine",
+      layout_sleep_li2: "<b>Canapé convertible</b> dans le petit salon d’étage",
+      pricing_panel_aria: "Tarifs et disponibilité",
+      pricing_h3: "Tarifs & disponibilité",
+      pricing_low_title: "Basse saison <span class='season-meta'>(fermé de novembre à fin mars)</span>",
+      pricing_mid_title: "Moyenne saison <span class='season-meta'>(d’avril à fin juin et de septembre à fin octobre)</span>",
+      pricing_high_title: "Haute saison <span class='season-meta'>(juillet & août)</span>",
+      pricing_mid_info: "D’avril à fin juin et de septembre à fin octobre - 2 nuitées minimums.",
+      pricing_mid_period: "D’avril à fin juin et de septembre à fin octobre.",
+      pricing_high_period: "Juillet & août.",
+
+      pricing_lead: "Prix clairs selon la durée du séjour.",
+      pricing_tier1_aria: "Tarif 2 à 4 nuitées",
+      pricing_tier1_dur: "2 à 4 nuitées",
+      pricing_tier1_price: "120€ / nuit",
+      pricing_tier1_hint: "Séjour court",
+      pricing_tier2_aria: "Tarif 5 nuitées et plus",
+      pricing_tier2_dur: "5 nuitées et +",
+      pricing_tier2_price: "100€ / nuit",
+      pricing_tier2_hint: "Tarif avantageux",
+      pricing_tier3_aria: "Tarif semaine haute saison",
+      pricing_tier3_dur: "Semaine",
+      pricing_tier3_price: "700€ / semaine",
+      pricing_tier3_hint: "Du samedi au samedi",
+      pricing_min_stay: "2 nuitées minimums.",
+      pricing_closed: "Fermé de novembre à fin mars.",
+      pricing_extra_fees: "Le forfait ménage est déjà inclus dans les prestations et la taxe de séjour est de 1.40€ par personne.",
+      feat_outdoor: "<b>Extérieur</b> : de l’air, de la verdure, et un cadre paisible pour se détendre (et laisser les enfants souffler).",
+      feat_layout: "<b>Agencement</b> : 2 chambres à l’étage, grande pièce de vie en bas (salon + cuisine), entrée avec placard et évier, WC en bas, salle de bain + WC à l’étage.",
+      feat_sleeping_palier: "<b>Couchages étage</b> : un lit double est sur la mezzanine, et le clic-clac du petit salon à l’étage peut se transformer en lit.",
+      layout_summary: "Le gîte comprend 2 chambres à l’étage, une grande pièce de vie au rez-de-chaussée (salon + cuisine), un couloir d’entrée avec placard et évier, un WC au rez-de-chaussée, et une salle de bain avec WC à l’étage. Un lit double est installé sur la mezzanine, et le clic-clac du petit salon à l’étage peut servir de couchage.",
+      family_tip: "<b>Astuce famille :</b> pour le Puy du Fou, prévoir de bonnes chaussures et (si possible) deux jours en haute saison.",
+      nearby_h2: "Autour du gîte : des sorties faciles à faire en famille",
+      nearby_p: "Vous êtes bien placé pour <b>le Puy du Fou</b>… et pour varier entre bocage, nature et une journée “océan”.",
+      puy_h3: "Le Puy du Fou",
+      puy_p: "Une journée (ou deux) qui met tout le monde d’accord : spectacles grandioses,",
+      access_h2: "Accès & carte",
+      access_p1: "Le gîte se situe à <b>La Petite Barre</b>, sur la commune de <b>Pouzauges</b> (Vendée).",
+      access_p2: "Cliquez sur “Itinéraire” pour ouvrir Google Maps.",
+      contact_h3: "Réserver / prendre rendez-vous",
+      contact_p: "Réservation <b>uniquement par téléphone</b> pour rester simple, rapide et humain.",
+      phone_k: "Téléphone",
+      address_k: "Adresse",
+      route_k: "Itinéraire",
+      open_maps: "Ouvrir Google Maps",
+      foot_top: "Haut de page",
+      foot_access: "Accès",
+      foot_contact: "Contact",
+      item_place_t: "Pouzauges, Vendée",
+      item_place_d: "Base idéale pour rayonner : Puy du Fou, bocage, marais, côte.",
+      item_warm_t: "Ambiance chaleureuse",
+      item_warm_d: "Lumineux, confortable, pensé pour se retrouver et ralentir.",
+      chip_country: "<b>✔</b> Campagne",
+      chip_puy: "<b>✔</b> Proche Puy du Fou",
+      chip_calm: "<b>✔</b> Calme",
+      chip_easy: "<b>✔</b> Accès facile",
+      chip_family: "<b>✔</b> En famille",
+      chip_relax: "<b>✔</b> Séjour détente",
+      tile_bocage_h4: "Pouzauges & bocage",
+      tile_bocage_p: "Balades, points de vue, patrimoine : parfait pour une fin de journée tranquille.",
+      tile_marais_h4: "Marais Poitevin",
+      tile_marais_p: "Canaux, barques, “Venise Verte” : une sortie nature dépaysante, très appréciée des familles.",
+      puy_li1: "<b>Famille-friendly</b> : émotions + pauses possibles.",
+      puy_li2: "<b>Astuce</b> : venir tôt / réserver en avance en haute saison.",
+      puy_li3: "<b>Option</b> : 2 jours si vous voulez “tout voir” sans courir.",
+      card_sables_t: "Les Sables-d’Olonne",
+      card_sables_d: "Plage, port, promenade… une journée lumineuse qui fait du bien (et facile en famille).",
+      card_Tiffauges_t: "Tiffauges & château médiéval",
+      card_Tiffauges_d: "Histoire vivante, remparts, animations médiévales… une immersion unique au cœur du Moyen Âge.",
+      card_cine_t: "La Cinéscénie (soir)",
+      card_cine_d: "Une soirée magique (si vous pouvez) : spectaculaire, émouvant, mémorable.",
+      contact_tip: "<b>Astuce :</b> pour le Puy du Fou, pensez à réserver tôt en haute saison et à prévoir 2 jours si vous voulez “tout voir” sans courir.",
+      footer_copy: "Gîte de La Petite Barre · Pouzauges (Vendée)",
+      map_title: "Carte : La Petite Barre, Pouzauges",
+      prev_photo: "Photo précédente",
+      next_photo: "Photo suivante",
+      call_aria: "Appeler pour réserver",
+      hero_intro: "Bienvenue à <b>La Petite Barre</b>, à Pouzauges, au cœur de la Vendée. Un <b>gîte à Pouzauges</b> (Vendée), chaleureux et moderne, pour se ressourcer… et profiter du <b>Puy du Fou</b> et des plus belles escapades vendéennes.",
+      fam_chip_arrival: "<b>✔</b> Arrivée simple",
+      fam_chip_kitchen: "<b>✔</b> Cuisine équipée",
+      fam_chip_kids: "<b>✔</b> Enfants & bébés",
+      fam_chip_layout: "<b>✔</b> Linge fourni",
+      fam_chip_calm: "<b>✔</b> Calme",
+      nav_access_contact: "Accès & Contact",
+    },
+    en: {
+      brand_tag: "Pouzauges · Vendée · Countryside",
+      nav_gite: "The cottage",
+      nav_nearby: "Nearby",
+      nav_access: "Access",
+      nav_contact: "Contact",
+      call_to_book: "Call to book",
+      reserve_online: "Book online",
+      reserve_online_aria: "Book online",
+      hero_h1: "Peaceful countryside, <br/>close to unforgettable memories.",
+      hero_p: "A warm, modern <b>holiday cottage in Pouzauges</b> (Vendée) — perfect to unwind and enjoy the <b>Puy du Fou</b> and the best of the region.",
+      see_route: "Get directions",
+      ideas: "Things to do",
+      stat_puy: "to Puy du Fou",
+      stat_phone_k: "100% by phone",
+      stat_phone_l: "simple, direct booking",
+      stat_bocage_k: "Countryside",
+      stat_bocage_l: "nature · walks · calm",
+      panel_breathe_h2: "A breath of fresh air",
+      panel_breathe_p: "A <b>country-chic</b> spirit, a <b>modern</b> touch, and everything you need to feel at home:",
+      panel_breathe_tail: "gentleness, simplicity, and proximity to must-see places.",
+      item_phone_t: "Phone booking",
+      item_phone_d: "Easy: one call, clear answers, and we confirm your stay together.",
+      brief_h2: "At a glance",
+      gite_h2: "A family-friendly cottage - 4 to 8 guests -",
+      gite_intro: "Travelling with children (or a baby)? Everything is designed to keep it <b>simple</b>:",
+      gallery_h3: "Photo gallery",
+      gallery_p: "Living area, fully equipped kitchen, bedrooms and outdoors — the essentials at a glance.",
+      onsite_h3: "Everything you need on site",
+      onsite_p: "The goal: avoid the “we forgot…” and keep the stay comfortable for the whole family.",
+      feat_kitchen: "<b>Kitchen & meals</b>: complete tableware, pans, dishes, glasses, cutlery — everything for everyday cooking.",
+      feat_kids: "<b>For kids</b>: play space, games and books, a calm and reassuring atmosphere.",
+      feat_baby: "<b>For babies</b>: baby cot, high chair, safety gate and baby bathtub.",
+      feat_comfort: "<b>Comfort</b>: bed linen and towels provided, free Wi-Fi, storage and heating.",
+      feat_appliances: "<b>Appliances</b>: washing machine, dishwasher, oven, microwave, hair dryer.",
+      layout_panel_aria: "Layout and sleeping arrangements",
+      layout_h3: "Layout & sleeping",
+      layout_lead: "Clear and practical overview for family booking.",
+      layout_tag: "Easy layout",
+      layout_ground_aria: "Ground floor",
+      layout_ground_badge: "Level 1",
+      layout_ground_k: "Ground floor",
+      layout_ground_li1: "Large living space <b>lounge + kitchen</b>",
+      layout_ground_li2: "Entrance with <b>cupboard + sink</b>",
+      layout_ground_li3: "<b>1 WC</b> downstairs",
+      layout_up_aria: "Upstairs",
+      layout_up_badge: "Level 2",
+      layout_up_k: "Upstairs",
+      layout_up_li1: "<b>2 bedrooms</b>",
+      layout_up_li2: "<b>Small TV lounge</b> on the mezzanine",
+      layout_up_li3: "<b>Bathroom + WC</b>",
+      layout_sleep_aria: "Additional sleeping",
+      layout_sleep_badge: "Extra beds",
+      layout_sleep_k: "Extra sleeping",
+      layout_sleep_li1: "<b>2 single beds</b> on the mezzanine",
+      layout_sleep_li2: "<b>Sofa bed</b> in the upstairs lounge",
+      pricing_panel_aria: "Rates and availability",
+      pricing_h3: "Rates & availability",
+      pricing_low_title: "Low season <span class='season-meta'>(closed from November to end of March)</span>",
+      pricing_mid_title: "Mid season <span class='season-meta'>(from April to end of June and from September to end of October)</span>",
+      pricing_high_title: "High season <span class='season-meta'>(July & August)</span>",
+      pricing_mid_info: "From April to end of June and from September to end of October - minimum 2 nights.",
+      pricing_mid_period: "From April to end of June and from September to end of October.",
+      pricing_high_period: "July & August.",
+      pricing_lead: "Clear pricing based on length of stay.",
+      pricing_tier1_aria: "Rate for 2 to 4 nights",
+      pricing_tier1_dur: "2 to 4 nights",
+      pricing_tier1_price: "€120 / night",
+      pricing_tier1_hint: "Short stay",
+      pricing_tier2_aria: "Rate for 5 nights and more",
+      pricing_tier2_dur: "5 nights and +",
+      pricing_tier2_price: "€100 / night",
+      pricing_tier2_hint: "Best value",
+      pricing_tier3_aria: "High season weekly rate",
+      pricing_tier3_dur: "Week",
+      pricing_tier3_price: "€700 / week",
+      pricing_tier3_hint: "Saturday to Saturday",
+      pricing_min_stay: "Minimum stay: 2 nights.",
+      pricing_closed: "Closed from November to end of March.",
+      pricing_extra_fees: "Cleaning is already included and tourist tax is €1.40 per person.",
+      feat_outdoor: "<b>Outdoors</b>: fresh air, greenery and a peaceful setting to relax (and let the kids unwind).",
+      feat_layout: "<b>Layout</b>: 2 upstairs bedrooms, large living area downstairs (lounge + kitchen), entrance hall with cupboard and sink, WC downstairs, bathroom + WC upstairs.",
+      feat_sleeping_palier: "<b>Extra sleeping upstairs</b>: one double bed is on the landing, and the sofa bed in the upstairs lounge can be turned into a bed.",
+      layout_summary: "The cottage includes 2 upstairs bedrooms, a large living area downstairs (lounge + kitchen), an entrance hall with cupboard and sink, a WC downstairs, and a bathroom with WC upstairs. One double bed is on the landing, and the sofa bed in the upstairs lounge can be used as extra sleeping space.",
+      family_tip: "<b>Family tip:</b> for Puy du Fou, bring good shoes and (if possible) plan two days in high season.",
+      nearby_h2: "Around the cottage: easy family outings",
+      nearby_p: "Perfectly located for <b>Puy du Fou</b>… and to mix countryside, nature and a day by the ocean.",
+      puy_h3: "Puy du Fou",
+      puy_p: "One (or two) days everyone will love: spectacular shows,",
+      access_h2: "Access & map",
+      access_p1: "The cottage is located at <b>La Petite Barre</b>, in <b>Pouzauges</b> (Vendée, France).",
+      access_p2: "Click “Directions” to open Google Maps.",
+      contact_h3: "Book / get in touch",
+      contact_p: "Booking is <b>by phone only</b> — simple, fast and personal.",
+      phone_k: "Phone",
+      address_k: "Address",
+      route_k: "Directions",
+      open_maps: "Open Google Maps",
+      foot_top: "Top",
+      foot_access: "Access",
+      foot_contact: "Contact",
+      item_place_t: "Pouzauges, Vendée",
+      item_place_d: "A great base: Puy du Fou, countryside, marshes and the coast.",
+      item_warm_t: "Warm atmosphere",
+      item_warm_d: "Bright, comfortable — made for slowing down and enjoying time together.",
+      chip_country: "<b>✔</b> Countryside",
+      chip_puy: "<b>✔</b> Near Puy du Fou",
+      chip_calm: "<b>✔</b> Quiet",
+      chip_easy: "<b>✔</b> Easy access",
+      chip_family: "<b>✔</b> Family-friendly",
+      chip_relax: "<b>✔</b> Relaxing stay",
+      tile_bocage_h4: "Pouzauges & countryside",
+      tile_bocage_p: "Walks, viewpoints and heritage — perfect for a calm late afternoon.",
+      tile_marais_h4: "Marais Poitevin",
+      tile_marais_p: "Canals, boats and the “Green Venice”: a refreshing nature day, loved by families.",
+      puy_li1: "<b>Family-friendly</b>: big emotions with easy breaks.",
+      puy_li2: "<b>Tip</b>: arrive early / book ahead in high season.",
+      puy_li3: "<b>Option</b>: plan 2 days if you want to see it all without rushing.",
+      card_sables_t: "Les Sables-d’Olonne",
+      card_sables_d: "Beach, harbour, seaside strolls… a bright, easy day out for families.",
+      card_Tiffauges_t: "Tiffauges & medieval castle",
+      card_Tiffauges_d: "Living history, ramparts and medieval shows… a unique immersion in the heart of the Middle Ages.",
+      card_cine_t: "La Cinéscénie (evening)",
+      card_cine_d: "A magical evening (if you can): spectacular, moving, unforgettable.",
+      contact_tip: "<b>Tip:</b> for Puy du Fou, book early in high season and consider 2 days to enjoy without rushing.",
+      footer_copy: "Gîte de La Petite Barre · Pouzauges (Vendée)",
+      map_title: "Map: La Petite Barre, Pouzauges",
+      prev_photo: "Previous photo",
+      next_photo: "Next photo",
+      call_aria: "Call to book",
+      hero_intro: "Welcome to <b>La Petite Barre</b>, in Pouzauges, in the heart of Vendée. A warm, modern <b>holiday cottage in Pouzauges</b> (Vendée) — perfect to unwind and enjoy the <b>Puy du Fou</b> and the best local getaways.",
+      fam_chip_arrival: "<b>✔</b> Easy arrival",
+      fam_chip_kitchen: "<b>✔</b> Fully equipped kitchen",
+      fam_chip_kids: "<b>✔</b> Kids & babies",
+      fam_chip_layout: "<b>✔</b> 2 upstairs bedrooms",
+      fam_chip_calm: "<b>✔</b> Quiet",
+      nav_access_contact: "Access & Contact",
+    },
+    de: {
+      brand_tag: "Pouzauges · Vendée · Land",
+      nav_gite: "Das Ferienhaus",
+      nav_nearby: "In der Nähe",
+      nav_access: "Anfahrt",
+      nav_contact: "Kontakt",
+      call_to_book: "Anrufen & buchen",
+      reserve_online: "Online buchen",
+      reserve_online_aria: "Online buchen",
+      hero_h1: "Ruhe auf dem Land, <br/>ganz nah an unvergesslichen Momenten.",
+      hero_p: "Ein warmes, modernes <b>Ferienhaus in Pouzauges</b> (Vendée) — ideal zum Abschalten und um den <b>Puy du Fou</b> und die schönsten Ausflüge der Region zu genießen.",
+      see_route: "Route ansehen",
+      ideas: "Ausflugsideen",
+      stat_puy: "zum Puy du Fou",
+      stat_phone_k: "100% per Telefon",
+      stat_phone_l: "einfach & direkt buchen",
+      stat_bocage_k: "Land",
+      stat_bocage_l: "Natur · Spaziergänge · Ruhe",
+      panel_breathe_h2: "Durchatmen",
+      panel_breathe_p: "Ein <b>ländlich-schicker</b> Stil, ein <b>moderner</b> Touch und alles, was man braucht, um sich wohlzufühlen:",
+      panel_breathe_tail: "Sanftheit, Einfachheit und die Nähe zu den wichtigsten Ausflugszielen.",
+      item_phone_t: "Telefonische Buchung",
+      item_phone_d: "Ganz einfach: ein Anruf, klare Antworten, und wir bestätigen den Aufenthalt gemeinsam.",
+      brief_h2: "Auf einen Blick",
+      gite_h2: "Ein Ferienhaus für Familien - 4 bis 8 Personen -",
+      gite_intro: "Mit Kindern (oder Baby) unterwegs? Hier ist alles darauf ausgelegt, dass es <b>einfach</b> ist:",
+      gallery_h3: "Fotogalerie",
+      gallery_p: "Wohnbereich, voll ausgestattete Küche, Schlafzimmer und Außenbereich — das Wichtigste auf einen Blick.",
+      onsite_h3: "Alles ist vor Ort",
+      onsite_p: "Ziel: das „Haben wir vergessen…“ vermeiden und den Aufenthalt für alle komfortabel machen.",
+      feat_kitchen: "<b>Küche & Essen</b>: vollständiges Geschirr, Töpfe, Auflaufformen, Gläser, Besteck — alles für den Alltag.",
+      feat_kids: "<b>Für Kinder</b>: Platz zum Spielen, Spiele und Bücher, ruhige und sichere Atmosphäre.",
+      feat_baby: "<b>Für Babys</b>: Babybett, Hochstuhl, Schutzgitter und Babybadewanne.",
+      feat_comfort: "<b>Komfort</b>: Bettwäsche und Handtücher inklusive, kostenloses WLAN, Stauraum und Heizung.",
+      feat_appliances: "<b>Haushaltsgeräte</b>: Waschmaschine, Geschirrspüler, Backofen, Mikrowelle, Haartrockner.",
+      layout_panel_aria: "Aufteilung und Schlafplätze",
+      layout_h3: "Aufteilung & Schlafplätze",
+      layout_lead: "Klar und praktisch für eine Familienbuchung.",
+      layout_tag: "Klare Struktur",
+      layout_ground_aria: "Erdgeschoss",
+      layout_ground_badge: "Ebene 1",
+      layout_ground_k: "Erdgeschoss",
+      layout_ground_li1: "Großer Wohnbereich <b>Wohnzimmer + Küche</b>",
+      layout_ground_li2: "Eingang mit <b>Schrank + Spüle</b>",
+      layout_ground_li3: "<b>1 WC</b> im Erdgeschoss",
+      layout_up_aria: "Obergeschoss",
+      layout_up_badge: "Ebene 2",
+      layout_up_k: "Obergeschoss",
+      layout_up_li1: "<b>2 Schlafzimmer</b>",
+      layout_up_li2: "<b>Kleiner TV-Salon</b> auf der Mezzanine",
+      layout_up_li3: "<b>Badezimmer + WC</b>",
+      layout_sleep_aria: "Zusätzliche Schlafplätze",
+      layout_sleep_badge: "Schlafplätze +",
+      layout_sleep_k: "Schlafplätze +",
+      layout_sleep_li1: "<b>2 Einzelbetten</b> auf der Mezzanine",
+      layout_sleep_li2: "<b>Schlafsofa</b> im kleinen Salon oben",
+      pricing_panel_aria: "Preise und Verfügbarkeit",
+      pricing_h3: "Preise & Verfügbarkeit",
+      pricing_low_title: "Nebensaison <span class='season-meta'>(geschlossen von November bis Ende März)</span>",
+      pricing_mid_title: "Mittelsaison <span class='season-meta'>(von April bis Ende Juni und von September bis Ende Oktober)</span>",
+      pricing_high_title: "Hochsaison <span class='season-meta'>(Juli & August)</span>",
+      pricing_mid_info: "Von April bis Ende Juni und von September bis Ende Oktober - Mindestaufenthalt 2 Nächte.",
+      pricing_mid_period: "Von April bis Ende Juni und von September bis Ende Oktober.",
+      pricing_high_period: "Juli & August.",
+      pricing_badge: "Direktpreise",
+      pricing_lead: "Klare Preise je nach Aufenthaltsdauer.",
+      pricing_tier1_aria: "Preis für 2 bis 4 Nächte",
+      pricing_tier1_dur: "2 bis 4 Nächte",
+      pricing_tier1_price: "120€ / Nacht",
+      pricing_tier1_hint: "Kurzaufenthalt",
+      pricing_tier2_aria: "Preis ab 5 Nächten",
+      pricing_tier2_dur: "5 Nächte und mehr",
+      pricing_tier2_price: "100€ / Nacht",
+      pricing_tier2_hint: "Vorteilspreis",
+      pricing_tier3_aria: "Wochenpreis Hochsaison",
+      pricing_tier3_dur: "Woche",
+      pricing_tier3_price: "700€ / Woche",
+      pricing_tier3_hint: "Von Samstag bis Samstag",
+      pricing_min_stay: "Mindestaufenthalt: 2 Nächte.",
+      pricing_closed: "Geschlossen von November bis Ende März.",
+      pricing_extra_fees: "Die Endreinigung ist bereits enthalten und die Kurtaxe beträgt 1,40€ pro Person.",
+      feat_outdoor: "<b>Außenbereich</b>: frische Luft, Grün und eine ruhige Umgebung zum Entspannen.",
+      feat_layout: "<b>Aufteilung</b>: 2 Schlafzimmer im Obergeschoss, großer Wohnbereich unten (Wohnzimmer + Küche), Eingangsflur mit Schrank und Spüle, WC unten, Bad + WC oben.",
+      feat_sleeping_palier: "<b>Schlafplätze oben</b>: Ein Doppelbett steht auf dem Treppenabsatz, und das Schlafsofa im kleinen Obergeschoss-Salon kann als Bett genutzt werden.",
+      layout_summary: "Das Ferienhaus umfasst 2 Schlafzimmer im Obergeschoss, einen großen Wohnbereich im Erdgeschoss (Wohnzimmer + Küche), einen Eingangsflur mit Schrank und Spüle, ein WC im Erdgeschoss sowie ein Badezimmer mit WC im Obergeschoss. Ein Doppelbett befindet sich auf dem Treppenabsatz, und das Schlafsofa im kleinen Salon oben bietet zusätzliche Schlafplätze.",
+      family_tip: "<b>Familientipp:</b> Für den Puy du Fou gute Schuhe einplanen und (wenn möglich) in der Hochsaison zwei Tage vorsehen.",
+      nearby_h2: "Rund ums Ferienhaus: einfache Familienausflüge",
+      nearby_p: "Perfekt gelegen für <b>den Puy du Fou</b>… und um Land, Natur und einen Tag am Meer zu kombinieren.",
+      puy_h3: "Puy du Fou",
+      puy_p: "Ein (oder zwei) Tage, die alle begeistern: spektakuläre Shows,",
+      access_h2: "Anfahrt & Karte",
+      access_p1: "Das Ferienhaus liegt in <b>La Petite Barre</b>, in der Gemeinde <b>Pouzauges</b> (Vendée).",
+      access_p2: "Klicken Sie auf „Route“, um Google Maps zu öffnen.",
+      contact_h3: "Buchen / Kontakt",
+      contact_p: "Buchung <b>nur telefonisch</b> — einfach, schnell und persönlich.",
+      phone_k: "Telefon",
+      address_k: "Adresse",
+      route_k: "Route",
+      open_maps: "Google Maps öffnen",
+      foot_top: "Nach oben",
+      foot_access: "Anfahrt",
+      foot_contact: "Kontakt",
+      item_place_t: "Pouzauges, Vendée",
+      item_place_d: "Idealer Ausgangspunkt: Puy du Fou, Land, Sümpfe und Küste.",
+      item_warm_t: "Wohlfühlatmosphäre",
+      item_warm_d: "Hell, komfortabel — gemacht zum Entschleunigen und Zusammensein.",
+      chip_country: "<b>✔</b> Land",
+      chip_puy: "<b>✔</b> Nähe Puy du Fou",
+      chip_calm: "<b>✔</b> Ruhig",
+      chip_easy: "<b>✔</b> Einfache Anfahrt",
+      chip_family: "<b>✔</b> Familienfreundlich",
+      chip_relax: "<b>✔</b> Erholsamer Aufenthalt",
+      tile_bocage_h4: "Pouzauges & Land",
+      tile_bocage_p: "Spaziergänge, Aussichtspunkte, Kulturerbe — perfekt für einen ruhigen Abend.",
+      tile_marais_h4: "Marais Poitevin",
+      tile_marais_p: "Kanäle, Boote und die „Grüne Venedig“: ein Naturausflug, den Familien lieben.",
+      puy_li1: "<b>Familienfreundlich</b>: große Emotionen mit Pausen.",
+      puy_li2: "<b>Tipp</b>: früh kommen / in der Hochsaison im Voraus buchen.",
+      puy_li3: "<b>Option</b>: 2 Tage, wenn ihr alles sehen wollt, ohne zu hetzen.",
+      card_sables_t: "Les Sables-d’Olonne",
+      card_sables_d: "Strand, Hafen, Promenade… ein heller, einfacher Familientag.",
+      card_Tiffauges_t: "Tiffauges & mittelalterliche Burg",
+      card_Tiffauges_d: "Lebendige Geschichte, Festungsmauern und mittelalterliche Vorführungen… ein einzigartiges Eintauchen ins Mittelalter.",
+      card_cine_t: "La Cinéscénie (Abend)",
+      card_cine_d: "Ein magischer Abend (wenn möglich): spektakulär, bewegend, unvergesslich.",
+      contact_tip: "<b>Tipp:</b> Für den Puy du Fou in der Hochsaison früh buchen und 2 Tage einplanen, wenn ihr alles ohne Stress sehen wollt.",
+      footer_copy: "Gîte de La Petite Barre · Pouzauges (Vendée)",
+      map_title: "Karte: La Petite Barre, Pouzauges",
+      prev_photo: "Vorheriges Foto",
+      next_photo: "Nächstes Foto",
+      call_aria: "Anrufen & buchen",
+      hero_intro: "Willkommen in <b>La Petite Barre</b>, in Pouzauges, im Herzen der Vendée. Ein warmes, modernes <b>Ferienhaus in Pouzauges</b> — ideal zum Abschalten und um den <b>Puy du Fou</b> und die schönsten Ausflüge der Region zu genießen.",
+      fam_chip_arrival: "<b>✔</b> Einfache Anreise",
+      fam_chip_kitchen: "<b>✔</b> Voll ausgestattete Küche",
+      fam_chip_kids: "<b>✔</b> Kinder & Babys",
+      fam_chip_layout: "<b>✔</b> 2 Schlafzimmer oben",
+      fam_chip_calm: "<b>✔</b> Ruhig",
+      nav_access_contact: "Anfahrt & Kontakt",
+    },
+    es: {
+      brand_tag: "Pouzauges · Vendée · Campo",
+      nav_gite: "La casa rural",
+      nav_nearby: "Cerca",
+      nav_access: "Acceso",
+      nav_contact: "Contacto",
+      call_to_book: "Llamar para reservar",
+      reserve_online: "Reservar en línea",
+      reserve_online_aria: "Reservar en línea",
+      hero_h1: "Paz en el campo, <br/>cerca de recuerdos inolvidables.",
+      hero_p: "Una <b>casa rural en Pouzauges</b> (Vendée) cálida y moderna — perfecta para desconectar y disfrutar del <b>Puy du Fou</b> y de las mejores escapadas.",
+      see_route: "Cómo llegar",
+      ideas: "Qué hacer",
+      stat_puy: "al Puy du Fou",
+      stat_phone_k: "100% por teléfono",
+      stat_phone_l: "reserva simple y directa",
+      stat_bocage_k: "Campo",
+      stat_bocage_l: "naturaleza · paseos · calma",
+      panel_breathe_h2: "Un soplo de aire fresco",
+      panel_breathe_p: "Un estilo <b>campestre chic</b>, un toque <b>moderno</b> y todo lo necesario para sentirse como en casa:",
+      panel_breathe_tail: "calma, sencillez y cercanía a los lugares imprescindibles.",
+      item_phone_t: "Reserva por teléfono",
+      item_phone_d: "Fácil: una llamada, respuestas claras y confirmamos tu estancia.",
+      brief_h2: "De un vistazo",
+      gite_h2: "Una casa pensada para familias - 4 a 8 personas -",
+      gite_intro: "¿Vienes con niños (o un bebé)? Aquí todo está pensado para que sea <b>simple</b>:",
+      gallery_h3: "Galería de fotos",
+      gallery_p: "Salón, cocina equipada, dormitorios y exterior — lo esencial de un vistazo.",
+      onsite_h3: "Todo está listo",
+      onsite_p: "Objetivo: evitar los “se nos olvidó…” y hacer la estancia cómoda para toda la familia.",
+      feat_kitchen: "<b>Cocina y comidas</b>: vajilla completa, ollas, fuentes, vasos, cubiertos — todo para cocinar a diario.",
+      feat_kids: "<b>Para niños</b>: zona de juego, juegos y libros, ambiente tranquilo y acogedor.",
+      feat_baby: "<b>Para bebés</b>: cuna, trona, barrera de seguridad y bañera para bebé.",
+      feat_comfort: "<b>Confort</b>: ropa de cama y toallas incluidas, Wi-Fi gratis, almacenamiento y calefacción.",
+      feat_appliances: "<b>Electrodomésticos</b>: lavadora, lavavajillas, horno, microondas, secador de pelo.",
+      layout_panel_aria: "Distribución y camas",
+      layout_h3: "Distribución y camas",
+      layout_lead: "Claro y práctico para reservar en familia.",
+      layout_tag: "Distribución clara",
+      layout_ground_aria: "Planta baja",
+      layout_ground_badge: "Nivel 1",
+      layout_ground_k: "Planta baja",
+      layout_ground_li1: "Gran zona de estar <b>salón + cocina</b>",
+      layout_ground_li2: "Entrada con <b>armario + fregadero</b>",
+      layout_ground_li3: "<b>1 WC</b> en planta baja",
+      layout_up_aria: "Planta alta",
+      layout_up_badge: "Nivel 2",
+      layout_up_k: "Planta alta",
+      layout_up_li1: "<b>2 dormitorios</b>",
+      layout_up_li2: "<b>Pequeño salón TV</b> en la entreplanta",
+      layout_up_li3: "<b>Baño + WC</b>",
+      layout_sleep_aria: "Camas adicionales",
+      layout_sleep_badge: "Camas +",
+      layout_sleep_k: "Camas +",
+      layout_sleep_li1: "<b>2 camas individuales</b> en la entreplanta",
+      layout_sleep_li2: "<b>Sofá cama</b> en el pequeño salón de arriba",
+      pricing_panel_aria: "Tarifas y disponibilidad",
+      pricing_h3: "Tarifas y disponibilidad",
+      pricing_low_title: "Temporada baja <span class='season-meta'>(cerrado de noviembre a finales de marzo)</span>",
+      pricing_mid_title: "Temporada media <span class='season-meta'>(de abril a finales de junio y de septiembre a finales de octubre)</span>",
+      pricing_high_title: "Temporada alta <span class='season-meta'>(julio y agosto)</span>",
+      pricing_mid_info: "De abril a finales de junio y de septiembre a finales de octubre - estancia mínima de 2 noches.",
+      pricing_mid_period: "De abril a finales de junio y de septiembre a finales de octubre.",
+      pricing_high_period: "Julio y agosto.",
+      pricing_badge: "Tarifas directas",
+      pricing_lead: "Precios claros según la duración de la estancia.",
+      pricing_tier1_aria: "Tarifa de 2 a 4 noches",
+      pricing_tier1_dur: "2 a 4 noches",
+      pricing_tier1_price: "120€ / noche",
+      pricing_tier1_hint: "Estancia corta",
+      pricing_tier2_aria: "Tarifa de 5 noches o más",
+      pricing_tier2_dur: "5 noches o más",
+      pricing_tier2_price: "100€ / noche",
+      pricing_tier2_hint: "Tarifa ventajosa",
+      pricing_tier3_aria: "Tarifa semanal temporada alta",
+      pricing_tier3_dur: "Semana",
+      pricing_tier3_price: "700€ / semana",
+      pricing_tier3_hint: "De sábado a sábado",
+      pricing_min_stay: "Estancia mínima: 2 noches.",
+      pricing_closed: "Cerrado de noviembre a finales de marzo.",
+      pricing_extra_fees: "La limpieza ya está incluida y la tasa turística es de 1,40€ por persona.",
+      feat_outdoor: "<b>Exterior</b>: aire libre, verde y un entorno tranquilo para relajarse.",
+      feat_layout: "<b>Distribución</b>: 2 dormitorios en la planta alta, gran zona de estar abajo (salón + cocina), entrada con armario y fregadero, WC abajo, baño + WC arriba.",
+      feat_sleeping_palier: "<b>Camas en la planta alta</b>: una cama doble está en el rellano, y el sofá cama del pequeño salón de arriba puede convertirse en cama.",
+      layout_summary: "La casa incluye 2 dormitorios en la planta alta, una gran zona de estar en la planta baja (salón + cocina), un pasillo de entrada con armario y fregadero, un WC en la planta baja y un baño con WC arriba. Una cama doble está instalada en el rellano y el sofá cama del pequeño salón de arriba sirve como cama adicional.",
+      family_tip: "<b>Consejo familiar:</b> para el Puy du Fou, lleva buen calzado y (si puedes) planifica dos días en temporada alta.",
+      nearby_h2: "Alrededor: planes fáciles en familia",
+      nearby_p: "Estás muy bien ubicado/a para <b>el Puy du Fou</b>… y para combinar campo, naturaleza y un día de “mar”.",
+      puy_h3: "Puy du Fou",
+      puy_p: "Un día (o dos) que encanta a todos: espectáculos grandiosos,",
+      access_h2: "Acceso y mapa",
+      access_p1: "La casa está en <b>La Petite Barre</b>, en <b>Pouzauges</b> (Vendée).",
+      access_p2: "Pulsa “Cómo llegar” para abrir Google Maps.",
+      contact_h3: "Reservar / contacto",
+      contact_p: "Reserva <b>solo por teléfono</b> — simple, rápida y humana.",
+      phone_k: "Teléfono",
+      address_k: "Dirección",
+      route_k: "Ruta",
+      open_maps: "Abrir Google Maps",
+      foot_top: "Arriba",
+      foot_access: "Acceso",
+      foot_contact: "Contacto",
+      item_place_t: "Pouzauges, Vendée",
+      item_place_d: "Base ideal: Puy du Fou, campo, marismas y costa.",
+      item_warm_t: "Ambiente acogedor",
+      item_warm_d: "Luminoso y cómodo — para bajar el ritmo y disfrutar juntos.",
+      chip_country: "<b>✔</b> Campo",
+      chip_puy: "<b>✔</b> Cerca del Puy du Fou",
+      chip_calm: "<b>✔</b> Tranquilo",
+      chip_easy: "<b>✔</b> Acceso fácil",
+      chip_family: "<b>✔</b> En familia",
+      chip_relax: "<b>✔</b> Estancia relax",
+      tile_bocage_h4: "Pouzauges y campo",
+      tile_bocage_p: "Paseos, miradores y patrimonio — perfecto para una tarde tranquila.",
+      tile_marais_h4: "Marais Poitevin",
+      tile_marais_p: "Canales, barcas y la “Venecia Verde”: un plan de naturaleza que encanta a las familias.",
+      puy_li1: "<b>Apto para familias</b>: emoción con pausas fáciles.",
+      puy_li2: "<b>Consejo</b>: venir temprano / reservar con antelación en temporada alta.",
+      puy_li3: "<b>Opción</b>: 2 días si quieres verlo todo sin correr.",
+      card_sables_t: "Les Sables-d’Olonne",
+      card_sables_d: "Playa, puerto, paseo… un día luminoso y fácil en familia.",
+      card_Tiffauges_t: "Tiffauges y castillo medieval",
+      card_Tiffauges_d: "Historia viva, murallas y animaciones medievales… una inmersión única en plena Edad Media.",
+      card_cine_t: "La Cinéscénie (noche)",
+      card_cine_d: "Una noche mágica (si puedes): espectacular, emocionante, inolvidable.",
+      contact_tip: "<b>Consejo:</b> para el Puy du Fou, reserva pronto en temporada alta y considera 2 días para disfrutar sin prisas.",
+      footer_copy: "Gîte de La Petite Barre · Pouzauges (Vendée)",
+      map_title: "Mapa: La Petite Barre, Pouzauges",
+      prev_photo: "Foto anterior",
+      next_photo: "Foto siguiente",
+      call_aria: "Llamar para reservar",
+      hero_intro: "Bienvenido/a a <b>La Petite Barre</b>, en Pouzauges, en el corazón de la Vendée. Una <b>casa rural en Pouzauges</b> cálida y moderna — perfecta para desconectar y disfrutar del <b>Puy du Fou</b> y de las mejores escapadas de la zona.",
+      fam_chip_arrival: "<b>✔</b> Llegada fácil",
+      fam_chip_kitchen: "<b>✔</b> Cocina equipada",
+      fam_chip_kids: "<b>✔</b> Niños y bebés",
+      fam_chip_layout: "<b>✔</b> 2 dormitorios arriba",
+      fam_chip_calm: "<b>✔</b> Tranquilo",
+      nav_access_contact: "Acceso y contacto",
+    }
+  };
+
+  const setLang = (lang) => {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      const val = (dict[lang] && dict[lang][key] != null) ? dict[lang][key] : (dict.en ? dict.en[key] : null);
+      if (!val) return;
+      // Keep markup where needed (hero_h1, hero_p, etc.)
+      if (val.includes("<") || el.tagName === "H1" || el.tagName === "SPAN" || el.tagName === "LI") {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+      const spec = el.getAttribute("data-i18n-attr");
+      if (!spec) return;
+      const parts = spec.split(",");
+      parts.forEach(p => {
+        const [attr,key] = p.split(":").map(s => s.trim());
+        const val = (dict[lang] && dict[lang][key] != null) ? dict[lang][key] : (dict.en ? dict.en[key] : null);
+        if (attr && val) el.setAttribute(attr, val);
+      });
+    });
+
+    // Update language buttons
+    document.querySelectorAll(".lang-btn").forEach(b => {
+      const active = b.dataset.lang === lang;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    // Persist
+    try { localStorage.setItem("site_lang", lang); } catch(e){}
+  };
+
+  // Wire buttons
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => setLang(btn.dataset.lang));
+  });
+
+  // Initial language: saved > browser > default fr
+  const saved = (() => { try { return localStorage.getItem("site_lang"); } catch(e){ return null; } })();
+  const browser = (navigator.language || "fr").slice(0,2).toLowerCase();
+  const supported = ["fr","en","de","es"];
+  const initial = (supported.includes(saved)) ? saved : (supported.includes(browser) ? browser : "fr");
+  setLang(initial);
 })();
 </script>
 
